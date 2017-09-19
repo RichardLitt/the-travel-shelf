@@ -1,41 +1,13 @@
 # The Travel Shelf
 
-_A magazine and index of beautiful global independant bookstores_
+> A magazine and index of beautiful global independent bookstores
 
-## Bookstores to add
+## Contribute
 
-### Edinburgh
-- Armchair Books
-- Poetry Library
-- Westport Books
+Please contribute if you'd like. This is an open project. [Open an issue!](https://github.com/RichardLitt/the-travel-shelf/issues/new)
 
-### Argentina
+Please note that all interaction here conforms to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
 
-- Borges 1975
-- Librari de Pasaje
+## License
 
-### Tokyo
-- That one in Japan that only sells one book
-
-### Czech Republic
-- The Globe in Prague
-
-### Canada
-- The Word in Montréal
-
-### Germany
-
-### France
-- Shakespeare and Co.
-
-### Portugal
-- NOT that one
-- The one in the old warehouse that we saw
-
-### 
-
-### United States
-
-#### Massachusetts
-- Porter Square Books
-- Collier Poetry
+[MIT](LICENSE) © Richard Littauer and [Contributors](https://github.com/RichardLitt/the-travel-shelf/graphs/contributors)
