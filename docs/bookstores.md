@@ -43,6 +43,18 @@
 - Shakespeare and Co.
 
 ### Portugal
+
+#### Porto
+- [Gato Vadio](http://gatovadiolivraria.blogspot.pt/)
+- [Poetria](http://www.livrariapoetria.com/)
+
+### Lisbon
+- [Ler Devagar](http://www.lerdevagar.com/)
+
+#### Sines
+
+- [A Das Artes](https://pt-pt.facebook.com/pages/A-Das-Artes-Livraria/322734321128754)
+
 - NOT that one
 - The one in the old warehouse that we saw
 
