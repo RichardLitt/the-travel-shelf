@@ -1,6 +1,30 @@
+### Start @ 10:10 is
+
 - Going forward from the exercise:
   - Node, express, React
   - Everyone try it locally
   - If using a template, make sure it's recent
   - __workshop - nodeschool.IO__
   - LearnU node / LearnUjs
+- Discussion on value proposition
+  - ART
+  - Database
+  - Tap into niche community / cool / Informing / vanity fair
+  - Trade off / users / content / user / owner /  
+- Homepage with featured bookstore (or 3)
+- Click to get more information
+- Click to visit the bookstore website
+- User comments add extra complexity
+- Keep thins simple
+- Version 2 will allow users to sign up to Learn
+- Customer reviews on version 6??
+- Let's start simple
+  - Do we needs a database??
+  - Starting with a database will allow us to grow the site in the future / add features.
+  - Finding google API's
+- Start simple and ADD features.
+- Homepage with 1 featured bookstore
+- Bookstore index with search icon and dynamic loading
+- In addition to learning boostrap / node /
+- Homework local host 4000
+- end of  11:40
