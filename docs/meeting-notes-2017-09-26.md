@@ -1,0 +1,6 @@
+- Going forward from the exercise:
+  - Node, express, React
+  - Everyone try it locally
+  - If using a template, make sure it's recent
+  - __workshop - nodeschool.IO__
+  - LearnU node / LearnUjs
