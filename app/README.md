@@ -1,4 +1,6 @@
-# bs4starter
+# The Travel Shelf Application
+
+## Based on: 
 Starter pack for Bootstrap 4 Beta
 Includes complete Bootstrap 4.0.0-beta dev environment with gulp and sass
 Version: 1.0.0
