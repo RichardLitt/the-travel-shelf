@@ -1,22 +1,22 @@
 {
-  "name": "the-travel-shelf",
+  "name": "bs4starter",
   "version": "1.0.0",
-  "description": "A magazine and index of beautiful global independent bookstores",
+  "description": "Bootstrap 4 workflow",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RichardLitt/the-travel-shelf.git"
-  },
-  "keywords": ["independent", "bookstores", "index"],
-  "author": "Richard Littauer <richard.littauer@gmail.com> (https://burntfen.com)",
-  "contributors": ["Joanna Katsifaraki", "Jose Esplana <jmesplana@gmail.com> (https://www.jey-em.com)", "Hanie Jafari <me@hjafari.com> (https://www.hjafari.com)", "Vernon Lillies <vernon.lillies@gmail.com>" ],
+  "author": "Joanna Katsifaraki",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RichardLitt/the-travel-shelf/issues"
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5"
   },
-  "homepage": "https://github.com/RichardLitt/the-travel-shelf",
-  "private": true
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
 }
