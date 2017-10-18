@@ -1,45 +1,113 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<style>
-		body {
-			background-color: #5EBED8
-      
-		}
-		
-		h1 {
-			color: #FFF;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Travel Shelf's Map</title>
+  <style>
+    body {
+ 	  background-color: #5EBED8
+ 	}
+
+ 	h1 {
+ 	  color: #FFF;
       margin: auto;
       text-align: center;
       padding: 20px 0;
-		} 
+    }
+    #map {
+      margin: auto;
+      height:500px;
+      width:50%;
+    }
+  </style>
+</head>
 
-    </style>
-    
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
-  </head>
-  <body>
-	
-	<header class="main-header">
-		<title>THE TRAVEL SHELF</title>
-	</header><!--/.main-header-->   
-    
-    <h1>MONTREAL, QUEBEC</h1>
-    <div id='map' style='width: 60%; height: 500px; margin: auto'></div>
-    
-    <script>
-        
-    mapboxgl.accessToken = 'pk.eyJ1Ijoiam1lc3BsYW5hIiwiYSI6ImNqOG44ZW93NzE2cnAycXM3NW90cmRsbmUifQ.vNlbslrYqVS9A8noorLumQ';
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/jmesplana/cj8nah5wu7k482rlqut7mimng'
-    });
+<body>
 
-    </script>
+  <h1>The Travel Shelf's Map</h1>
 
-	<footer class="main-footer">
-	</footer>
+  <div id="map"></div>
+  
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom: 12,
+        center:{lat:45.504706,lng:-73.590148}
+      }
 
-  </body>
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+      // Array of markers
+      var markers = [
+        {
+          coords:{lat:45.511924,lng:-73.570065},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h2>Maison Notman House</h2><p>The best tech community space in Montreal for startups, investors and corporates. You can meet them all there! Golden mile-like mansion transformed into a café and a meeting place. One of its kind.</p>'
+        },
+        {
+          coords:{lat:45.485751,lng:-73.5872776},
+          content:'<h3>Argo Bookshop</h3><p>Stalwart bookshop specializing in English-language novels & events in a cozy, quaint space.</p>'
+        },
+        {
+          coords:{lat:45.5247817,lng:-73.6069202},
+          content:'<h3>Librairie Drawn & Quarterly</h3><p>Lively bookstore specializing in literature & graphic novels & offering many readings.</p>'
+        },
+        {
+          coords:{lat:45.523151,lng:-73.6037141},
+          content:'<h3>S W Welch Bookseller</h3><p>Longtime vendor offering used & antiquarian volumes on a range of topics in a bookshelf-lined shop.</p>' },
+        {
+          coords:{lat:45.5079837,lng:-73.5773094},
+          content:'<h3>The Word</h3><p>Long-time source for secondhand books, focusing on literature, philosophy & poetry, plus textbooks.</p>'
+        }
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhankLmEggFWLTOLJzFY7MfhhNqnR8it0&callback=initMap">
+  </script>
+  
+</body>
 </html>
