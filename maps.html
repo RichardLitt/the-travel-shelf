@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+		body {
+			background-color: #5EBED8
+      
+		}
+		
+		h1 {
+			color: #FFF;
+      margin: auto;
+      text-align: center;
+      padding: 20px 0;
+		} 
+
+    </style>
+    
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.0/mapbox-gl.css' rel='stylesheet' />
+  </head>
+  <body>
+	
+	<header class="main-header">
+		<title>THE TRAVEL SHELF</title>
+	</header><!--/.main-header-->   
+    
+    <h1>MONTREAL, QUEBEC</h1>
+    <div id='map' style='width: 60%; height: 500px; margin: auto'></div>
+    
+    <script>
+        
+    mapboxgl.accessToken = 'pk.eyJ1Ijoiam1lc3BsYW5hIiwiYSI6ImNqOG44ZW93NzE2cnAycXM3NW90cmRsbmUifQ.vNlbslrYqVS9A8noorLumQ';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/jmesplana/cj8nah5wu7k482rlqut7mimng'
+    });
+
+    </script>
+
+	<footer class="main-footer">
+	</footer>
+
+  </body>
+</html>
