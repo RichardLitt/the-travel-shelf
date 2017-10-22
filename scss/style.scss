@@ -1,0 +1,44 @@
+$primary: #144f7a;
+$primary-overlay: rgba(20, 79, 122, 0.8);
+
+body {
+  margin-top: 105px;
+}
+
+.navbar {
+  opacity: 0.9;
+  background: #fff;
+
+  .nav-item {
+    font-size: 1.4rem;
+    padding-right: 20px;
+  }
+}
+
+#showcase {
+  margin-top: -20px;
+  position: relative;
+  background: url('../img/annie.jpg');
+  background-size:cover;
+  background-attachment:fixed;
+  min-height:600px;
+  overflow: hidden;
+
+  h1.hero {
+    margin-top: 5.5rem;
+  }
+
+  a.read {
+    margin-top: 2rem;
+  }
+
+  .primary-overlay {
+    background: $primary-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+} // End of #showcase
