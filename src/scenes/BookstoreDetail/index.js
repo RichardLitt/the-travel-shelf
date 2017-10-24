@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Articles extends Component{
+class Container extends Component{
 
     render(){
         return (
@@ -14,4 +14,4 @@ class Articles extends Component{
     }
 }
 
-export default Articles;
+export default Container;
