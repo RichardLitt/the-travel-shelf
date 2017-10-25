@@ -15,7 +15,7 @@ class App extends Component {
           <Router>
               <div>
                   <ul>
-                      <li><Link to="/scenes/Homepage/index">Home</Link></li>
+                      <li><Link to="/">Home</Link></li>
                       <li><Link to="/scenes/BookstoreDetail/index">BookStore</Link></li>
                       <li><Link to="/scenes/BookstoreList/index">List of bookstores</Link></li>
 
@@ -23,7 +23,7 @@ class App extends Component {
 
                   <hr/>
 
-                  <Route exact path="/scenes/Homepage/index" component={Homepage}/>
+                  <Route exact path="/" component={Homepage}/>
                   <Route path="/scenes/BookstoreDetail/index" component={Bookstore}/>
                   <Route path="/scenes/BookstoreList/index" component={BookstoreList}/>
                   <Route path="/Map" component={Map}/>
