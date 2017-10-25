@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-class Container extends Component{
+class Homepage extends Component {
 
-    render(){
-        return (
+    render() {
+        return ( 
             <div>
-                <header className="Home-header">
-                    <h1 className="Home-title" style={{textAlign: "center"}}>The Travel Shelf</h1>
+                <header className = "Home-header" >
+                    <h1 className = "Home-title" style = {{textAlign: "center"}}> Welcome to The Travel Shelf </h1>
                 </header>
             </div>
         )
@@ -14,4 +14,4 @@ class Container extends Component{
     }
 }
 
-export default Container;
+export default Homepage;
