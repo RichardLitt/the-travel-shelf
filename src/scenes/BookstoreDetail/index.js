@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-class Articles extends Component{
+class BookstoreDetail extends Component{
 
     render(){
         return (
             <div>
                 <header className="Articles-header">
-                    <h1 className="Articles-title" style={{textAlign: "center"}}>Articles</h1>
+                    <h1 className="Articles-title" style={{textAlign: "center"}}>This page will show a book store information</h1>
                 </header>
             </div>
         )
@@ -14,4 +14,4 @@ class Articles extends Component{
     }
 }
 
-export default Articles;
+export default BookstoreDetail;

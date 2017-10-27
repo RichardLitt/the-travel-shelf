@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Home from './components/Home'
-import Index from './components/Index'
-import Articles from './components/Articles'
-import Map from './components/Map'
+import Homepage from './scenes/Homepage/index'
+import Bookstore from './scenes/BookstoreDetail/index'
+import BookstoreList from './scenes/BookstoreList/index'
 
 import {
     BrowserRouter as Router,
@@ -17,17 +16,16 @@ class App extends Component {
               <div>
                   <ul>
                       <li><Link to="/">Home</Link></li>
-                      <li><Link to="/index">index</Link></li>
-                      <li><Link to="/articles">Articles</Link></li>
-                      <li><Link to="/map">Map</Link></li>
+                      <li><Link to="/BookStore">BookStore</Link></li>
+                      <li><Link to="/BookStoreList">List of bookstores</Link></li>
 
                   </ul>
 
                   <hr/>
 
-                  <Route exact path="/" component={Home}/>
-                  <Route path="/Index" component={Index}/>
-                  <Route path="/Articles" component={Articles}/>
+                  <Route exact path="/" component={Homepage}/>
+                  <Route path="/BookStore" component={Bookstore}/>
+                  <Route path="/BookStoreList" component={BookstoreList}/>
                   <Route path="/Map" component={Map}/>
               </div>
           </Router>

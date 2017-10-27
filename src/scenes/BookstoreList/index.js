@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-class Index extends Component{
+class BookstoreList extends Component{
 
     render(){
         return (
             <div>
                 <header className="Index-header">
-                    <h1 className="Index-title" style={{textAlign: "center"}}>Index</h1>
+                    <h1 className="Index-title" style={{textAlign: "center"}}> This page will show list of bookstores</h1>
                 </header>
             </div>
         )
@@ -14,4 +14,4 @@ class Index extends Component{
     }
 }
 
-export default Index;
+export default BookstoreList;
