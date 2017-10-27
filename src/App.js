@@ -16,16 +16,16 @@ class App extends Component {
               <div>
                   <ul>
                       <li><Link to="/">Home</Link></li>
-                      <li><Link to="/scenes/BookstoreDetail/index">BookStore</Link></li>
-                      <li><Link to="/scenes/BookstoreList/index">List of bookstores</Link></li>
+                      <li><Link to="/BookStore">BookStore</Link></li>
+                      <li><Link to="/BookStoreList">List of bookstores</Link></li>
 
                   </ul>
 
                   <hr/>
 
                   <Route exact path="/" component={Homepage}/>
-                  <Route path="/scenes/BookstoreDetail/index" component={Bookstore}/>
-                  <Route path="/scenes/BookstoreList/index" component={BookstoreList}/>
+                  <Route path="/BookStore" component={Bookstore}/>
+                  <Route path="/BookStoreList" component={BookstoreList}/>
                   <Route path="/Map" component={Map}/>
               </div>
           </Router>
