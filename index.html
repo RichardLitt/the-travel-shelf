@@ -7,19 +7,23 @@
   <title>The Travel Shelf</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,700|Ovo" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light fixed-top pt-3">
-    <div class="container">
-      <a href="" class="navbar-brand">
-        <img src="img/ts-logo.svg" width="50" height="50" alt="travel-shelf logo"><h3 class="d-inline align-middle"> Travel Shelf</h3>
-      </a>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+
+  <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        	<img src="img/ts-logo.svg" width="50" height="40" alt="travel-shelf logo"><h4 class="d-inline align-middle"> Travel Shelf</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
             <a href="#home" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
@@ -37,30 +41,183 @@
           <li class="nav-item">
             <a href="#login" class="nav-link">Login</a>
           </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+	      <div class="input-group">
+		      <input type="text" class="form-control search" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+		  </div>
+ 		</form>
+        </div><!-- /navbar-collapse -->
+      </div><!-- /container -->
+    </nav>
 
 
   <!-- HERO -->
 <section id="showcase" class="py-5 text-white">
   <div class="primary-overlay">
     <div class="container">
-      <div class="row justify-content-start">
-        <div class="col-lg-2"></div>
-        <div class="col-md-8 text-center">
-          <h1 class="display-4 pt-5 pb-3 hero">A Magazine and Index of Beautiful Global Independent Bookstores</h1>
-          <p class="lead">Retro dreaming goals raclette target twee palo santo, VHS schlitz offal XOXO crucifix. Echo park farm-to-table ugh tote bag actually helvetica air plant hexagon listicle tousled vaporware lomo.</p>
+      <div class="row justify-content-center">
 
-          <a href="#" class="btn btn-outline-warning btn-lg read"><i class="fa fa-arrow-right"></i> Read More</a>
-        </div><!-- /col-lg-8 -->
-        <div class="col-lg-2"></div>
+        <div class="col text-center">
+        	<h1 class="display-4 myhero text-center">A Magazine and Index of Beautiful Global Independent Bookstores</h1>
+         	<p class="lead text-center">Retro dreaming goals raclette target twee palo santo, VHS schlitz offal XOXO crucifix. Echo park farm-to-table ugh tote bag actually helvetica air plant hexagon listicle tousled vaporware lomo.</p>
+
+          	<a href="#" class="btn btn-outline-warning btn-lg read"><i class="fa fa-arrow-right"></i> Read More</a>
+
+        </div>
 
       </div><!-- /row -->
     </div><!-- /container -->
   </div><!-- /primary-overlay -->
 </section>
+
+
+<!-- HOME HEADING SECTION -->
+    <Section id="home-heading">
+      <div class="dark-overlay">
+        <div class="row">
+          <div class="col">
+            <div class="container leaf">
+              <h1 class="mb-4">Welcome To The Travel Shelf</h1>
+              <hr align="center" width="30%">
+              <p>Soko radicchio bunya nuts gram dulse silver beet parsnip napa cabbage lotus root sea lettuce brussels sprout cabbage. Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage lettuce tomato kale arugula melon sierra sea lettuce broccoli celery lotus root carrot leone bologi rutabaga tigernut.</p>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /dark-overlay -->
+    </Section>
+
+
+	<!-- PORTFOLIO GALLERY -->
+	<section id="portfolio">
+	  <div class="container-fluid">
+	    <h1 class="text-center">Portfolio</h1>
+	    <hr align="center" width="30%">
+	    <p class="text-center header">Visit Your Local Bookstores Today!</p>
+	    <div class="row no-gutters container-grid">
+
+	      <div class="col-md-4 portfolio-item">
+	        <a class="portfolio-link" href="#">
+	          <div class="caption">
+	            <div class="caption-content">
+	              <p> Bookstore 1</p>
+	              <i class="fa fa-search-plus fa-2x"></i>
+	            </div>
+	          </div>
+	          <img src="img/book6.jpg" class="img-fluid" alt="Book store">
+	        </a>
+	      </div>
+
+	      <div class="col-md-8 portfolio-item">
+	        <a class="portfolio-link" href="#">
+	          <div class="caption">
+	            <div class="caption-content">
+	              <p> Bookstore 2</p>
+	              <i class="fa fa-search-plus fa-2x"></i>
+	            </div>
+	          </div>
+	          <img src="img/book1.jpg" class="img-fluid" alt="Book store">
+	        </a>
+	      </div>
+
+	      <div class="col-md-8 portfolio-item">
+	        <a class="portfolio-link" href="#">
+	          <div class="caption">
+	            <div class="caption-content">
+	              <p> Bookstore 3</p>
+	              <i class="fa fa-search-plus fa-2x"></i>
+	            </div>
+	          </div>
+	          <img src="img/book2.jpg" class="img-fluid" alt="Book store">
+	        </a>
+	      </div>
+
+	      <div class="col-md-4 portfolio-item">
+	        <a class="portfolio-link" href="#">
+	          <div class="caption">
+	            <div class="caption-content">
+	              <p> Bookstore 4</p>
+	              <i class="fa fa-search-plus fa-2x"></i>
+	            </div>
+	          </div>
+	          <img src="img/book3.jpg" class="img-fluid" alt="Book store">
+	        </a>
+	      </div>
+
+	      <div class="col-md-4 portfolio-item">
+	        <a class="portfolio-link" href="#">
+	          <div class="caption">
+	            <div class="caption-content">
+	              <p> Bookstore 5</p>
+	              <i class="fa fa-search-plus fa-2x"></i>
+	            </div>
+	          </div>
+	          <img src="img/book12.jpg" class="img-fluid" alt="Book store">
+	        </a>
+	      </div>
+
+	      <div class="col-md-8 portfolio-item">
+	        <a class="portfolio-link" href="#">
+	          <div class="caption">
+	            <div class="caption-content">
+	              <p> Bookstore 6</p>
+	              <i class="fa fa-search-plus fa-2x"></i>
+	            </div>
+	          </div>
+	          <img src="img/book4.jpg" class="img-fluid" alt="Book store">
+	        </a>
+	      </div>
+
+	    </div><!-- /row -->
+	  </div>
+	</section>
+
+
+    <!-- INFO SECTION -->
+    <section id="info" class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 align-self-center info-map">
+            <h3>Want To Know More?</h3>
+            <hr align="center" width="30%">
+            <p>Get Involved! Nori grape silver beet broccoli kombu beet greens fava bean olive celery carrot potato. </p>
+            <p>Get In Touch:
+            	<a href="#" class="email">info@travelshelf.org</a>
+            	<br>
+            	<a href="#" class="email">https://github.com/RichardLitt/the-travel-shelf</a>
+            </p>
+
+            <a href="#" class="btn btn-outline-warning btn-lg">Contact Us</a>
+          </div>
+
+          <div class="col-md-6 map">
+            <img src="img/world.png" class="img-fluid" alt="Map">
+          </div>
+        </div><!-- /row -->
+      </div><!-- /container -->
+    </section>
+
+
+	<!-- FOOTER -->
+    <footer id="main-footer" class="text-center p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Copyright 2017 &copy; Travel Shelf</p>
+            <p>
+              <a href="#" class="social"><i class="fa fa-facebook-square fa-2x"  aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="social"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+              </a>
+
+            </p>
+          </div>
+        </div>
+      </div>
+   </footer>
 
 
   <script src="js/jquery.min.js"></script>
