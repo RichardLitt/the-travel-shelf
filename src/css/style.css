@@ -1,0 +1,288 @@
+body {
+    margin-top: 105px;
+    font-family: "Ovo", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Muli", sans-serif;
+}
+
+.navbar {
+    opacity: 0.9;
+    background: #fff;
+    z-index: 100;
+    padding: 0.5rem 1rem 0 !important;
+}
+
+.navbar .navbar-brand h4 {
+    position: relative;
+    top: 3px;
+}
+
+.navbar .nav-item {
+    font-size: 1rem;
+    padding-right: 15px;
+}
+
+.navbar .nav-link,
+.navbar .search {
+    font-family: "Muli", sans-serif;
+}
+
+#showcase {
+    margin-top: -50px;
+    position: relative;
+    background: url("") no-repeat center center fixed;
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#showcase h1.myhero {
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+#showcase p {
+    line-height: 1.4;
+    padding: 0 1.8rem 1.5rem;
+}
+
+#showcase a.read {
+    margin-top: 2rem;
+    text-align: center;
+    margin: auto;
+}
+
+#showcase .primary-overlay {
+    background: rgba(20, 79, 122, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#home-heading {
+    position: relative;
+    min-height: 350px;
+    background-color: rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+#home-heading p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1rem;
+}
+
+.dark-overlay {
+    padding: 100px 0 80px;
+}
+
+
+/* no-gutters Class Rules */
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.no-gutters>[class^="col-"],
+.row.no-gutters>[class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.overlay {
+    position: relative;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+}
+
+.overlay:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 0;
+}
+
+.overlay:hover:before {
+    display: block;
+    cursor: pointer;
+}
+
+#info .info-map {
+    padding: 100px 0 30px;
+    text-align: center;
+}
+
+#info .info-map p {
+    padding: 0px 60px 0;
+}
+
+#info .info-map hr+p {
+    padding-top: 20px;
+}
+
+#info .info-map .email {
+    color: #111111;
+    -o-transition: color .2s ease-out, background 1s ease-in;
+    -ms-transition: color .2s ease-out, background 1s ease-in;
+    -moz-transition: color .2s ease-out, background 1s ease-in;
+    -webkit-transition: color .2s ease-out, background 1s ease-in;
+    transition: color .2s ease-out, background 1s ease-in;
+}
+
+#info .info-map .email:hover {
+    color: #ffc107;
+}
+
+#info .info-map a {
+    margin-top: 5px;
+}
+
+#info .map {
+    padding: 30px 0 80px;
+    text-align: center;
+}
+
+#main-footer {
+    background: #212529;
+    color: #fff;
+}
+
+#main-footer .col {
+    padding: 30px 0 8px;
+}
+
+#main-footer .social {
+    color: #ffc107;
+    padding-right: 15px;
+    -o-transition: color .2s ease-out, background 1s ease-in;
+    -ms-transition: color .2s ease-out, background 1s ease-in;
+    -moz-transition: color .2s ease-out, background 1s ease-in;
+    -webkit-transition: color .2s ease-out, background 1s ease-in;
+    transition: color .2s ease-out, background 1s ease-in;
+}
+
+#main-footer .social:hover {
+    color: #fff;
+}
+
+#portfolio {
+    padding-top: 100px;
+}
+
+#portfolio p.header {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+#portfolio .portfolio-link {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#portfolio .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    opacity: 0;
+    background: rgba(46, 46, 46, 0.7);
+}
+
+#portfolio .caption:hover {
+    opacity: 1;
+}
+
+#portfolio .caption-content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: -12px;
+}
+
+
+/*
+*******************************
+M E D I A  Q U E R I E S
+*******************************
+*/
+
+@media (min-width: 768px) {
+    #showcase h1.myhero {
+        margin-top: 3.5rem !important;
+        font-size: 3rem !important;
+    }
+    #showcase p {
+        padding: 0 2.5rem 2rem;
+    }
+    #home-heading p {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 1.2rem;
+    }
+    a.read {
+        margin-top: 3rem;
+    }
+    #info .map {
+        padding: 100px 0 80px;
+        text-align: center;
+    }
+    .gallery-text {
+        line-height: 20rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #showcase h1.myhero {
+        margin-top: 4rem !important;
+        font-size: 3.5rem !important;
+        padding-right: 8rem;
+        padding-left: 8rem;
+    }
+    #showcase p {
+        padding-right: 12rem;
+        padding-left: 12rem;
+    }
+    #home-heading p {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    .gallery-text {
+        line-height: 25rem;
+    }
+    .mygrid {
+        transform: translateY(80px);
+    }
+}
+
+
+/*# sourceMappingURL=style.css.map */
