@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Homepage from './scenes/Homepage/index'
 import Bookstore from './scenes/BookstoreDetail/index'
 import BookstoreList from './scenes/BookstoreList/index'
@@ -10,27 +10,27 @@ import {
 } from 'react-router-dom'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-          <Router>
-              <div>
-                  <ul>
-                      <li><Link to="/">Home</Link></li>
-                      <li><Link to="/BookStore">BookStore</Link></li>
-                      <li><Link to="/BookStoreList">List of bookstores</Link></li>
+      <Router>
+        <div>
+          <ul>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/BookStore'>BookStore</Link></li>
+            <li><Link to='/BookStoreList'>List of bookstores</Link></li>
 
-                  </ul>
+          </ul>
 
-                  <hr/>
+          <hr />
 
-                  <Route exact path="/" component={Homepage}/>
-                  <Route path="/BookStore" component={Bookstore}/>
-                  <Route path="/BookStoreList" component={BookstoreList}/>
-                  <Route path="/Map" component={Map}/>
-              </div>
-          </Router>
-    );
+          <Route exact path='/' component={Homepage} />
+          <Route path='/BookStore' component={Bookstore} />
+          <Route path='/BookStoreList' component={BookstoreList} />
+          <Route path='/Map' component={Map} />
+        </div>
+      </Router>
+    )
   }
 }
 
-export default App;
+export default App
