@@ -18,7 +18,6 @@ class App extends Component {
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/BookStore'>BookStore</Link></li>
             <li><Link to='/BookStoreList'>List of bookstores</Link></li>
-
           </ul>
 
           <hr />

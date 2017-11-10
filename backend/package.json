@@ -1,7 +1,7 @@
 {
-  "name": "the-travel-shelf",
+  "name": "the-travel-shelf-backend",
   "version": "1.0.0",
-  "description": "A magazine and index of beautiful global independent bookstores",
+  "description": "Backend for the-travel-shelf",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RichardLitt/the-travel-shelf.git"
@@ -22,29 +22,15 @@
   "bugs": {
     "url": "https://github.com/RichardLitt/the-travel-shelf/issues"
   },
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0",
-    "standard": "^10.0.3"
-  },
   "homepage": "https://github.com/RichardLitt/the-travel-shelf",
   "private": true,
-  "dependencies": {
-    "bootstrap": "4.0.0-beta",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.5",
-    "react": "^16.1.0",
-    "react-dom": "^16.1.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "node ./bin/www"
   },
-  "proxy": "http://localhost:3001"
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "mongoose": "^4.13.1"
+  }
 }
