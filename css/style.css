@@ -97,12 +97,13 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer; }
 
 #info .info-map {
-  padding: 100px 0 30px;
+  padding: 100px 0 50px;
   text-align: center; }
   #info .info-map p {
     padding: 0px 60px 0; }
-  #info .info-map hr + p {
-    padding-top: 20px; }
+  #info .info-map h6 {
+    margin-top: -12px;
+    font-weight: 700; }
   #info .info-map .email {
     color: #111111;
     -o-transition: color .2s ease-out, background 1s ease-in;
@@ -114,6 +115,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffc107; }
   #info .info-map a {
     margin-top: 5px; }
+  #info .info-map .mailing {
+    margin-top: 30px; }
+  #info .info-map input {
+    font-family: "Muli", sans-serif; }
+  #info .info-map .go {
+    font-family: "Muli", sans-serif;
+    font-weight: 700; }
 #info .map {
   padding: 30px 0 80px;
   text-align: center; }
@@ -137,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 #portfolio {
   padding-top: 100px; }
   #portfolio p.header {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 50px; }
   #portfolio .portfolio-link {
     position: relative;
@@ -185,12 +193,29 @@ M E D I A  Q U E R I E S
   a.read {
     margin-top: 3rem; }
 
+  #info .info-map {
+    padding: 100px 0 100px; }
   #info .map {
     padding: 100px 0 80px;
     text-align: center; }
 
   .gallery-text {
-    line-height: 20rem; } }
+    line-height: 20rem; }
+
+  #hero-blog {
+    min-height: 400px; }
+    #hero-blog h1.myhero {
+      font-size: 3rem;
+      margin-top: 6rem;
+      padding-top: 3.5rem;
+      padding-bottom: 2rem; }
+
+  #hero-bookstore {
+    min-height: 500px; }
+    #hero-bookstore h1.myhero {
+      font-size: 3.5rem;
+      margin-top: 9rem;
+      padding-top: 3.5rem; } }
 @media (min-width: 992px) {
   #showcase h1.myhero {
     margin-top: 4rem !important;

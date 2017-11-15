@@ -122,16 +122,16 @@
 #info {
 
   .info-map {
-    padding: 100px 0 30px;
+    padding: 100px 0 50px;
     text-align: center;
 
     p {
       padding: 0px 60px 0;
-
     }
 
-    hr +  p {
-      padding-top: 20px;
+    h6 {
+      margin-top: -12px;
+      font-weight: 700;
     }
 
     .email {
@@ -144,11 +144,24 @@
     }
 
     .email:hover {
-      color: $yellow;
+      color: #ffc107;
     }
 
     a {
       margin-top: 5px;
+    }
+
+    .mailing {
+      margin-top: 30px;
+    }
+
+    input {
+      font-family: "Muli", sans-serif;
+    }
+
+    .go {
+      font-family: "Muli", sans-serif;
+      font-weight: 700;
     }
   }
 // info-map
@@ -190,7 +203,7 @@
   padding-top: $section-padding-top;
 
   p.header {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 50px;
   }
 
@@ -256,18 +269,47 @@ M E D I A  Q U E R I E S
 
      a.read {
     margin-top: 3rem;
+
   }
 
-    #info .map {
-    padding: 100px 0 80px;
-    text-align: center;
-  }
+    #info {
+      .info-map {
+        padding: 100px 0 100px;
+      }
+
+      .map {
+      padding: 100px 0 80px;
+      text-align: center;
+      }
+    }
 
   .gallery-text {
     line-height:20rem;
   }
 
-}
+  //*** HERO SECTION ***
+  #hero-blog {
+    min-height:400px;
+
+    h1.myhero {
+      font-size: 3rem;
+      margin-top: 6rem;
+      padding-top: 3.5rem;
+      padding-bottom: 2rem;
+    }
+  }// #hero-blog
+
+  #hero-bookstore {
+    min-height:500px;
+
+    h1.myhero {
+      font-size: 3.5rem;
+      margin-top: 9rem;
+      padding-top: 3.5rem;
+    }
+  }
+
+} // End of media query
 
 
   @media (min-width: 992px) {
