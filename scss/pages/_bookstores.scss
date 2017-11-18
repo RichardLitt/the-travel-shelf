@@ -1,0 +1,200 @@
+// BOOKSTORES
+
+
+#hero-bookstore {
+  margin-top: -50px;
+  position: relative;
+  background: url('../img/capture-b.jpg') no-repeat 50% 0 fixed;
+  max-width: 100%;
+  min-height:300px;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  h1.myhero {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .primary-overlay {
+    background: rgba(0, 0, 0 , 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+} // End of #hero-blog
+
+// BOOKSTORE BLOG
+#blog-bookstore {
+  padding: 50px 0 0;
+
+  .post {
+    position: relative;
+    border: solid 1px #ddd;
+    margin: 40px 0 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    & header {
+      padding: 40px 20px 20px;
+
+      h3 {
+        margin: 0 0 8px;
+        padding: 0 0 15px;
+        border-bottom: solid 1px #ddd;
+
+        & a {
+          color: $body-color;
+          text-decoration: none;
+          -o-transition:color .5s ease-out, color 0.5s ease-in;
+          -ms-transition:color .5s ease-out, color 0.5s ease-in;
+          -moz-transition:color .5s ease-out, color 0.5s ease-in;
+          -webkit-transition:color .5s ease-out, color 0.5s ease-in;
+          transition:color .5s ease-out, color 0.5s ease-in;
+        }
+
+        & a:hover {
+          color: $accent-lg-blue;
+        }
+      } // h3
+    } // header
+
+    .post-excerpt {
+      padding: 20px 20px 30px;
+
+      p a {
+        color: $accent-lg-blue;
+        -o-transition:color .2s ease-out, color 0.3s ease-in;
+        -ms-transition:color .2s ease-out, color 0.3s ease-in;
+        -moz-transition:color .2s ease-out, color 0.3s ease-in;
+        -webkit-transition:color .2s ease-out, color 0.3s ease-in;
+        transition:color .2s ease-out, color 0.3s ease-in;
+      }
+
+        a:hover {
+          color: $body-color;
+          text-decoration: underline;
+        }
+
+      .learn-more {
+        margin-bottom: 2rem;
+        font-family: $font-family-sans;
+
+        a:hover {
+          color:#fff;
+          text-decoration: none;
+        }
+      }
+
+      .event-h3 {
+        margin-top: 3rem;
+        padding: 0 0 15px;
+        border-bottom: solid 1px #ddd;
+      }
+
+      .events {
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+      }
+
+      .event-list {
+        font-size: 1.2rem;
+        font-family: $font-family-sans;
+      }
+
+        a.listing {
+        color: $accent-lg-blue;
+        padding-left: 8px;
+        -o-transition:color .2s ease-out, color 0.3s ease-in;
+        -ms-transition:color .2s ease-out, color 0.3s ease-in;
+        -moz-transition:color .2s ease-out, color 0.3s ease-in;
+        -webkit-transition:color .2s ease-out, color 0.3s ease-in;
+        transition:color .2s ease-out, color 0.3s ease-in;
+
+        &:hover {
+          color: $body-color;
+        }
+      }
+    }// post-excerpt
+
+  } // post
+
+  //SIDEBAR
+  .widget {
+    position: relative;
+    border: solid 1px #ddd;
+    margin: 40px 0 40px;
+    padding: 30px 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    h4 {
+      margin: 0 0 10px;
+      padding: 0 0 10px;
+      border-bottom: solid 1px #ddd;
+    }
+
+    .input-group-addon {
+      font-family: $font-family-sans;
+      font-weight: 700;
+    }
+
+    input {
+      font-family: $font-family-sans;
+    }
+
+    .connect {
+      margin-bottom: 30px;
+    }
+
+    .address {
+      margin-bottom: 2px;
+      a {
+        color: $accent-lg-blue;
+        font-family: $font-family-sans;
+        font-size: 1.2rem;
+        -o-transition:color .2s ease-out, color 0.3s ease-in;
+        -ms-transition:color .2s ease-out, color 0.3s ease-in;
+        -moz-transition:color .2s ease-out, color 0.3s ease-in;
+        -webkit-transition:color .2s ease-out, color 0.3s ease-in;
+        transition:color .2s ease-out, color 0.3s ease-in;
+
+        &:hover {
+          color: $body-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .social {
+      margin-top: 15px;
+      a {
+       color: $body-color;
+       font-size: 2rem;
+       padding-right: 10px;
+       -o-transition:color .2s ease-out, color 0.3s ease-in;
+       -ms-transition:color .2s ease-out, color 0.3s ease-in;
+       -moz-transition:color .2s ease-out, color 0.3s ease-in;
+       -webkit-transition:color .2s ease-out, color 0.3s ease-in;
+       transition:color .2s ease-out, color 0.3s ease-in;
+
+       &:hover {
+         color: $accent-lg-blue;
+       }
+     }
+   }// social
+
+  }// widget
+
+} // END OF BLOG-BOOSTORE
+// END OF BOOKSTORE
