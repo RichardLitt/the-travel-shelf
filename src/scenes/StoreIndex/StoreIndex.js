@@ -6,13 +6,14 @@ class BookstoreList extends Component {
   componentDidMount() {
     fetch('/api/bookstores')
       .then(res => res.json())
-      .then(stores => this.setState({ stores }));
+      .then(stores => this.setState({ stores }))
+      .then(()=> console.log(this.state.stores))
   }
   render () {
     let stores =  this.state.stores.map(store =>
       <div key={store._id}>
         <h1>{store.name}</h1>
-        {store.review.map((paragraph, index) => <p key={index} >{paragraph}</p>)}
+        <p>{store.review}</p>
         <p>url: {store.websiteUrl}</p>
         <p>GoogleMaps: {store.locationUrl}</p>
         <ul>
