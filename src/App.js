@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import Homepage from './scenes/Homepage/index'
-import Bookstore from './scenes/BookstoreDetail/index'
-import BookstoreList from './scenes/BookstoreList/index'
+import HomePage from './scenes/HomePage/HomePage'
+import BookstoreIndex from './scenes/StoreIndex/StoreIndex'
+import Navbar from './components/Navbar/Navbar'
 
 import {
     BrowserRouter as Router,
-    Route,
-    Link
+    Route
 } from 'react-router-dom'
 
 class App extends Component {
@@ -14,18 +13,10 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/BookStore'>BookStore</Link></li>
-            <li><Link to='/BookStoreList'>List of bookstores</Link></li>
-          </ul>
+          <Navbar />
 
-          <hr />
-
-          <Route exact path='/' component={Homepage} />
-          <Route path='/BookStore' component={Bookstore} />
-          <Route path='/BookStoreList' component={BookstoreList} />
-          <Route path='/Map' component={Map} />
+          <Route exact path='/' component={HomePage} />
+          <Route path='/StoreIndex' component={BookstoreIndex} />
         </div>
       </Router>
     )

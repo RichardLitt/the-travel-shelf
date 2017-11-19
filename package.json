@@ -33,16 +33,16 @@
   "dependencies": {
     "body-parser": "~1.18.2",
     "bootstrap": "4.0.0-beta",
-    "ejs": "~2.5.7",
-    "express": "~4.15.5",
+    "ejs": "^2.5.7",
+    "express": "^4.15.5",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "mongoose": "^4.13.1",
-    "popper.js": "^1.12.5",
-    "react-dom": "^16.1.0",
+    "mongoose": "^4.13.4",
+    "popper.js": "^1.13.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14",
-    "react": "^16.1.0"
+    "react-scripts": "1.0.14"
   },
   "scripts": {
     "start": "react-scripts start",
