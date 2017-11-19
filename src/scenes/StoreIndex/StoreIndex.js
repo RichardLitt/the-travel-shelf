@@ -24,12 +24,11 @@ class BookstoreList extends Component {
       </div>
     )
     return (
-      <div>
+      <div className="container">
         <header className='Index-header'>
-          <h1 className='Index-title' style={{textAlign: 'center'}}> This page will show list of bookstores</h1>
+          <h1 className='Index-title' style={{textAlign: 'center'}}>Store Index</h1>
         </header>
         <section>
-          <h1>Stores</h1>
           {stores}
         </section>
       </div>
