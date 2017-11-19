@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Markdown from 'react-remarkable'
 
 class BookstoreList extends Component {
   state = {stores: []}
@@ -13,7 +14,7 @@ class BookstoreList extends Component {
     let stores =  this.state.stores.map(store =>
       <div key={store._id}>
         <h1>{store.name}</h1>
-        <p>{store.review}</p>
+        <Markdown>{store.review}</Markdown>
         <p>url: {store.websiteUrl}</p>
         <p>GoogleMaps: {store.locationUrl}</p>
         <ul>
