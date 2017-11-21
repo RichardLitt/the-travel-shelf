@@ -1,0 +1,184 @@
+#about-bookstore {
+  margin-top: -50px;
+  position: relative;
+  background: url('../img/bs-night-lg-2.jpg') no-repeat 65% 0 fixed;
+  max-width: 100%;
+  min-height:300px;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  h1.myhero {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .primary-overlay {
+    background: rgba(0, 0, 0 , 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+} // about-bookstore
+
+#about {
+  position: relative;
+  min-height: 350px;
+  padding: 100px 0 100px;
+  background-color: $background-dkGrey;
+
+  .description {
+    span {
+      font-family: $font-family-sans;
+      font-weight: 700;
+    }
+  }
+
+  .description, p {
+    font-size: 1.1rem;
+  }
+
+    a.info {
+      color: $accent-lg-blue;
+      -o-transition:color .5s ease-out, color 0.5s ease-in;
+      -ms-transition:color .5s ease-out, color 0.5s ease-in;
+      -moz-transition:color .5s ease-out, color 0.5s ease-in;
+      -webkit-transition:color .5s ease-out, color 0.5s ease-in;
+      transition:color .5s ease-out, color 0.5s ease-in;
+
+      &:hover {
+        color: $body-color;
+        text-decoration: underline;
+      }
+    }
+
+    .developer {
+      .richard {
+        width:40%;
+        height:40%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+
+      .icons .fa {
+        color: $body-color;
+        padding-right: 8px;
+        margin-top: 5px;
+        -o-transition:color .5s ease-out, color 0.5s ease-in;
+        -ms-transition:color .5s ease-out, color 0.5s ease-in;
+        -moz-transition:color .5s ease-out, color 0.5s ease-in;
+        -webkit-transition:color .5s ease-out, color 0.5s ease-in;
+        transition:color .5s ease-out, color 0.5s ease-in;
+
+        &:hover {
+          color: $accent-lg-blue;
+        }
+      }
+    }
+}// About
+
+#team {
+  padding: 100px 0 55px;
+
+  .webdeveloper {
+    margin-bottom: 80px;
+    .avatar {
+      width:45%;
+      height:45%;
+      margin-bottom: 40px;
+    }
+    .bio {
+      padding: 0 45px;
+      font-size: 1.1rem;
+    }
+
+    .icons .fa {
+      color: $body-color;
+      padding-right: 8px;
+      -o-transition:color .5s ease-out, color 0.5s ease-in;
+      -ms-transition:color .5s ease-out, color 0.5s ease-in;
+      -moz-transition:color .5s ease-out, color 0.5s ease-in;
+      -webkit-transition:color .5s ease-out, color 0.5s ease-in;
+      transition:color .5s ease-out, color 0.5s ease-in;
+
+      &:hover {
+        color: $accent-lg-blue;
+      }
+    }
+  }
+
+}// team
+
+
+
+/*
+*******************************
+M E D I A  Q U E R I E S
+*******************************
+*/
+
+  @media (min-width: 576px) {
+    #about {
+      padding-bottom: 85px;
+      .developer {
+        .richard {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    #team {
+      .webdeveloper {
+        .avatar {
+          width:50%;
+          height:50%;
+        }
+      }
+  }
+}// @media 576px
+
+
+  @media (min-width: 768px) {
+    #about {
+      padding-bottom: 80px;
+
+      .developer {
+        .richard {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    #team {
+      padding: 130px 0 45px;
+      .webdeveloper {
+        .avatar {
+          width:70%;
+          height:70%;
+        }
+        .bio {
+          padding: 0 10px;
+        }
+      }
+    }
+
+  }// @media 768px
+
+
+  @media (min-width: 992px) {
+      #about {
+        padding-top: 120px;
+        padding-bottom: 70px;
+
+        .first {
+          margin-bottom: 50px;
+        }
+      }
+    }
