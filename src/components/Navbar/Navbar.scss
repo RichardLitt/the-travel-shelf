@@ -1,0 +1,23 @@
+@import "../../sass/variables.scss";
+@import "../../sass/base.scss";
+
+.navbar {
+  opacity: 0.9;
+  background: #fff;
+  z-index: 100;
+  padding: 2px 0 0 !important;
+
+  .navbar-brand h4 {
+    position: relative;
+    top: 3px;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    padding-right: 15px;
+  }
+
+  .nav-link, .search {
+    font-family: $font-family-sans;
+  }
+}

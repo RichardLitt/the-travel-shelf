@@ -38,6 +38,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "mongoose": "^4.13.4",
+    "node-sass-chokidar": "0.0.3",
     "popper.js": "^1.13.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
@@ -49,7 +50,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "backend": "node ./backend/bin/www"
+    "backend": "node ./backend/bin/www",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "proxy": "http://localhost:3001"
 }

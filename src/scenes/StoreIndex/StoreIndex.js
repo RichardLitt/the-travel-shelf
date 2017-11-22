@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './StoreIndex.css'
 
 class BookstoreList extends Component {
   state = {stores: []}
