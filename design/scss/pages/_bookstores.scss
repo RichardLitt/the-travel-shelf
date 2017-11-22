@@ -144,6 +144,10 @@
       border-bottom: solid 1px #ddd;
     }
 
+    .theInput {
+      padding-left: 20px !important;
+    }
+
     .input-group-addon {
       font-family: $font-family-sans;
       font-weight: 700;
@@ -198,3 +202,22 @@
 
 } // END OF BLOG-BOOSTORE
 // END OF BOOKSTORE
+
+
+/*
+*******************************
+M E D I A  Q U E R I E S
+*******************************
+*/
+
+@media (min-width: 768px) {
+  #blog-bookstore {
+    .widget {
+      .theInput {
+        padding-left: 18px !important;
+        padding-right: 15px !important;
+
+        }
+      }//widget
+    }
+  }//media
