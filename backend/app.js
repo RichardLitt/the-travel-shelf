@@ -1,9 +1,9 @@
-var express = require('express')
-var path = require('path')
-var bodyParser = require('body-parser')
-var bookstores = require('./routes/bookstores')
+const express = require('express')
+const path = require('path')
+const bodyParser = require('body-parser')
+const bookstores = require('./routes/bookstores')
 
-var app = express()
+const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))

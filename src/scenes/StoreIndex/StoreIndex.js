@@ -8,7 +8,6 @@ class BookstoreList extends Component {
     fetch('/api/bookstores')
       .then(res => res.json())
       .then(stores => this.setState({ stores }))
-      .then(()=> console.log(this.state.stores))
   }
   render () {
     let stores =  this.state.stores.map(store =>

@@ -8,6 +8,10 @@ Starter pack for Bootstrap 4 Beta
 Includes complete Bootstrap 4.0.0-beta dev environment with gulp and sass
 Version: 1.0.0
 
+Persistent data stored in a MongoDB database
+To connect a database, create a .env file in the root directory and assign the database's URI connection scheme to a variable called MONGODB_URI 
+example: MONGODB_URI=mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+
 Install Dependencies
 
 npm install
