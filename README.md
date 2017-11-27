@@ -2,29 +2,31 @@
 
 > A magazine and index of beautiful global independent bookstores
 
+## Info
+
+Current Version: 1.0.0
+
+Built with a React front-end using Sass and a Node/Express backend
+
+Persistent data stored in a MongoDB database hosted on mlab.com
+
+Database URI connection scheme loaded as an environment variable named MONGODB_URI from a .env file located in the root directory
+
 ## Usage
 
-Starter pack for Bootstrap 4 Beta
-Includes complete Bootstrap 4.0.0-beta dev environment with gulp and sass
-Version: 1.0.0
+npm install to install dependencies 
 
-Persistent data stored in a MongoDB database
-To connect a database, create a .env file in the root directory and assign the database's URI connection scheme to a variable called MONGODB_URI 
-example: MONGODB_URI=mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+npm run backend to launch backend 
 
-Install Dependencies
+npm start to run app in development mode
 
-npm install
-Compile Sass & Run Dev Server
-
-npm start
-Files are compiled into /src
+Open http://localhost:3000 to view app in the browser
 
 ## Contribute
 
 Please contribute if you'd like. This is an open project. [Open an issue!](https://github.com/RichardLitt/the-travel-shelf/issues/new)
 
-Please note that all interaction here conforms to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
+Please note that all interaction here conforms to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## License
 
