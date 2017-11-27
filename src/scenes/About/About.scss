@@ -1,0 +1,227 @@
+@import "../../sass/variables.scss";
+@import "../../sass/base.scss";
+#about-bookstore {
+    margin-top: -50px;
+    position: relative;
+    background: url('../img/bs-night-lg-2.jpg') no-repeat 65% 0 fixed;
+    max-width: 100%;
+    min-height: 350px;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    h1.myhero {
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+    }
+    .primary-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+} // about-bookstore
+#about {
+    position: relative;
+    min-height: 350px;
+    padding: 100px 0 100px;
+    background-color: $background-dkGrey;
+    .description {
+        span {
+            font-family: $font-family-sans;
+            font-weight: 700;
+            a {
+                color: #111111;
+                -o-transition: color .2s ease-out, background 1s ease-in;
+                -ms-transition: color .2s ease-out, background 1s ease-in;
+                -moz-transition: color .2s ease-out, background 1s ease-in;
+                -webkit-transition: color .2s ease-out, background 1s ease-in;
+                transition: color .2s ease-out, background 1s ease-in;
+                &:hover {
+                    color: $accent-lg-blue;
+                }
+            } // a
+        } //span
+        a.dev {
+            color: $accent-lg-blue;
+            text-decoration: none;
+            -o-transition: color .5s ease-out, color 0.5s ease-in;
+            -ms-transition: color .5s ease-out, color 0.5s ease-in;
+            -moz-transition: color .5s ease-out, color 0.5s ease-in;
+            -webkit-transition: color .5s ease-out, color 0.5s ease-in;
+            transition: color .5s ease-out, color 0.5s ease-in;
+            &:hover {
+                color: $body-color;
+            }
+        }
+    } //description
+    .description,
+    p {
+        font-size: 1.1rem;
+    }
+    a.info {
+        color: $accent-lg-blue;
+        -o-transition: color .5s ease-out, color 0.5s ease-in;
+        -ms-transition: color .5s ease-out, color 0.5s ease-in;
+        -moz-transition: color .5s ease-out, color 0.5s ease-in;
+        -webkit-transition: color .5s ease-out, color 0.5s ease-in;
+        transition: color .5s ease-out, color 0.5s ease-in;
+        &:hover {
+            color: $body-color;
+            text-decoration: underline;
+        }
+    }
+    .developer {
+        .richard {
+            width: 40%;
+            height: 40%;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+        .icons .fa {
+            color: $body-color;
+            padding-right: 8px;
+            margin-top: 5px;
+            -o-transition: color .5s ease-out, color 0.5s ease-in;
+            -ms-transition: color .5s ease-out, color 0.5s ease-in;
+            -moz-transition: color .5s ease-out, color 0.5s ease-in;
+            -webkit-transition: color .5s ease-out, color 0.5s ease-in;
+            transition: color .5s ease-out, color 0.5s ease-in;
+            &:hover {
+                color: $accent-lg-blue;
+            }
+        }
+    }
+} // About
+#team {
+    padding: 100px 0 55px;
+    .webdeveloper {
+        margin-bottom: 90px;
+        .avatar {
+            width: 45%;
+            height: 45%;
+            margin-bottom: 40px;
+        }
+        .text-muted {
+            font-size: 1.2rem !important;
+        }
+        .bio {
+            padding: 0 30px;
+            font-size: 1.1rem;
+        }
+        .icons .fa {
+            color: $body-color;
+            padding-right: 8px;
+            -o-transition: color .5s ease-out, color 0.5s ease-in;
+            -ms-transition: color .5s ease-out, color 0.5s ease-in;
+            -moz-transition: color .5s ease-out, color 0.5s ease-in;
+            -webkit-transition: color .5s ease-out, color 0.5s ease-in;
+            transition: color .5s ease-out, color 0.5s ease-in;
+            &:hover {
+                color: $accent-lg-blue;
+            }
+        }
+    }
+} // team
+#main-footer {
+    background: #212529;
+    color: #fff;
+    .col {
+        padding: 30px 0 8px;
+    }
+    p {
+        font-family: $font-family-sans;
+        i.fa-heart {
+            color: $accent-color;
+            font-size: 0.8rem;
+            padding: 0 2px;
+        }
+    }
+    .social {
+        // color: #ffc107;
+        color: $yellow;
+        padding-right: 15px;
+        -o-transition: color .2s ease-out, background 1s ease-in;
+        -ms-transition: color .2s ease-out, background 1s ease-in;
+        -moz-transition: color .2s ease-out, background 1s ease-in;
+        -webkit-transition: color .2s ease-out, background 1s ease-in;
+        transition: color .2s ease-out, background 1s ease-in;
+    }
+    .social:hover {
+        color: #fff;
+    }
+} //main-footer
+
+/*
+  *******************************
+  M E D I A  Q U E R I E S
+  *******************************
+  */
+
+@media (min-width: 576px) {
+    #about {
+        padding-bottom: 85px;
+        .developer {
+            .richard {
+                margin-top: 30px;
+            }
+        }
+    }
+    #team {
+        .webdeveloper {
+            .avatar {
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+} // @media 576px
+@media (min-width: 768px) {
+    #about {
+        padding-bottom: 80px;
+        .join {
+            margin-top: 30px;
+        }
+    }
+    #team {
+        padding: 130px 0 45px;
+        .webdeveloper {
+            .avatar {
+                width: 40%;
+                height: 40%;
+            }
+            .bio {
+                padding: 0 50px;
+                font-size: 1.1rem;
+            }
+        }
+    }
+} // @media 768px
+@media (min-width: 992px) {
+    #about {
+        padding-top: 120px;
+        padding-bottom: 70px;
+        .first {
+            margin-bottom: 50px;
+        }
+    } //about
+    #team {
+        .webdeveloper {
+            .avatar {
+                width: 70%;
+                height: 70%;
+            }
+            .text-muted {
+                font-size: 1.3rem !important;
+            }
+            .bio {
+                padding: 0;
+            }
+        }
+    }
+}
