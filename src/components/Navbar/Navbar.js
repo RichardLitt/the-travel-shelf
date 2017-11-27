@@ -23,9 +23,9 @@ const navbar = () => {
             <li className='nav-item'>
               <NavLink to='/StoreIndex' exact className='nav-link'>Store Index</NavLink>
             </li>
-            {/* <li className="nav-item"> */}
-            {/* <a href="#contact" className="nav-link">Contact</a> */}
-            {/* </li> */}
+            <li className="nav-item">
+            <a href="#contact" className="nav-link">Contact</a>
+            </li>
           </ul>
           <form className='form-inline my-2 my-lg-0'>
             <div className='input-group'>
