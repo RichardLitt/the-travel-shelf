@@ -2,25 +2,30 @@
 
 > A magazine and index of beautiful global independent bookstores
 
-## Info
-
-Current Version: 1.0.0
+## Install and usage
 
 Built with a React front-end using Sass and a Node/Express backend
-
 Persistent data stored in a MongoDB database hosted on mlab.com
 
-Database URI connection scheme loaded as an environment variable named MONGODB_URI from a .env file located in the root directory
+The Database URI connection scheme is loaded as an environment variable named `MONGODB_URI` from a `.env` file located in the root directory. To start, `touch .env` and then get a connection scheme URI from either your own database, or mLab, or by contacting @VernL.
 
-## Usage
+Node version: v8.9.1.
 
-npm install to install dependencies 
+Run `npm install` to install dependencies.
 
-npm run backend to launch backend 
+Then `npm run backend` to launch backend.
 
-npm start to run app in development mode
+In a new tab, `npm start` to run app in development mode.
 
-Open http://localhost:3000 to view app in the browser
+Finally, open http://localhost:3000 to view the app in the browser.
+
+### Sass
+
+To run Sass, use `npm run watch-sass`.
+
+### Testing
+
+`npm run test`
 
 ## Contribute
 
@@ -30,4 +35,4 @@ Please note that all interaction here conforms to the [Contributor Covenant Code
 
 ## License
 
-[MIT](LICENSE) © Richard Littauer and [Contributors](https://github.com/RichardLitt/the-travel-shelf/graphs/contributors)
+[MIT](LICENSE) © Richard Littauer and [Contributors](https://github.com/RichardLitt/the-travel-shelf/graphs/contributors).
