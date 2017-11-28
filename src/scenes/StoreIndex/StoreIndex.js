@@ -1,40 +1,48 @@
 import React, { Component } from 'react'
 import './StoreIndex.css'
+import StoreCard from '../../components/StoreCard/StoreCard'
 
-class BookstoreList extends Component {
-  state = {stores: []}
+class StoreIndex extends Component {
+  state = {
+    stores: null
+  }
 
   componentDidMount() {
     fetch('/api/bookstores')
       .then(res => res.json())
       .then(stores => this.setState({ stores }))
   }
+
+  storeSelectHandler = (name) => {
+    this.props.history.push({pathname: this.props.match.url + '/' + name})
+  }
+
   render () {
-    let stores =  this.state.stores.map(store =>
-      <div key={store._id}>
-        <h1>{store.name}</h1>
-        <p>{store.review}</p>
-        <p>url: {store.websiteUrl}</p>
-        <p>GoogleMaps: {store.locationUrl}</p>
-        <ul>
-          <li>coffee : {store.coffee ? 'True' : 'False'}</li>
-          <li>wifi : {store.wifi ? 'True' : 'False'}</li>
-          <li>plugs : {store.plugs ? 'True' : 'False'}</li>
-          <li>event : {store.events ? 'True' : 'False'}</li>
-        </ul>
-      </div>
-    )
+    let stores = null
+
+    if(this.state.stores){
+      stores =  this.state.stores.map(store => (
+          <StoreCard
+            {...store}
+            clicked={() => this.storeSelectHandler(store.name)}
+          />
+        )
+      )
+    }
+
     return (
       <div className="container">
         <header className='Index-header'>
           <h1 className='Index-title' style={{textAlign: 'center'}}>Store Index</h1>
         </header>
         <section>
-          {stores}
+          <div className='row'>
+            {stores}
+          </div>
         </section>
       </div>
     )
   }
 }
 
-export default BookstoreList
+export default StoreIndex
