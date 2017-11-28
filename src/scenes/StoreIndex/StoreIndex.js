@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './StoreIndex.css'
 import StoreCard from '../../components/StoreCard/StoreCard'
+import '../../components/StoreCard/StoreCard.css'
 
 class StoreIndex extends Component {
   state = {
@@ -22,10 +23,10 @@ class StoreIndex extends Component {
 
     if(this.state.stores){
       stores =  this.state.stores.map(store => (
-          <StoreCard
-            {...store}
-            clicked={() => this.storeSelectHandler(store.name)}
-          />
+            <StoreCard
+              {...store}
+              clicked={() => this.storeSelectHandler(store.name)}
+            />
         )
       )
     }

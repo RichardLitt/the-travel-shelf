@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Markdown from 'react-remarkable'
-import './StoreCard.scss'
+import './StoreCard.css'
 
 class storeCard extends Component {
   render () {
