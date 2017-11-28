@@ -16,4 +16,14 @@ router.post('/', function (req, res, next) {
     .catch(err => console.log(err))
 })
 
+router.get('/:name', function (req, res, next) {
+  let name = req.params.name
+  db.Bookstore.findOne({name})
+    .then(store => {
+      console.log(store)
+      res.json(store)
+    })
+    .catch(err => console.log(err))
+})
+
 module.exports = router
