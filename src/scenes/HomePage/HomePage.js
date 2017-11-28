@@ -20,7 +20,6 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
-
         <section id='portfolio'>
           <div className='container-fluid'>
             <h2 className='text-center'>Portfolio</h2>
@@ -136,6 +135,8 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
+
+
 
         <footer id='main-footer' className='text-center p-4'>
           <div className='container'>
