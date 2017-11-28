@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HomePage from './scenes/HomePage/HomePage'
-import BookstoreIndex from './scenes/StoreIndex/StoreIndex'
+import StoreIndex from './scenes/StoreIndex/StoreIndex'
 import Navbar from './components/Navbar/Navbar'
 import About from './scenes/About/About'
 
@@ -17,7 +17,7 @@ class App extends Component {
           <Navbar />
 
           <Route exact path='/' component={HomePage} />
-          <Route path='/StoreIndex' component={BookstoreIndex} />
+          <Route path='/StoreIndex' component={StoreIndex} />
           <Route path='/About' component={About} />
         </div>
       </Router>
