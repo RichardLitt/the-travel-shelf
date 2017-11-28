@@ -14,7 +14,7 @@ class Homepage extends Component {
                 <div className='container leaf'>
                   <h2 className='mb-4'>Welcome To The Travel Shelf</h2>
                   <hr align='center' width='30%' />
-                  <p>Soko radicchio bunya nuts gram dulse silver beet parsnip napa cabbage lotus root sea lettuce brussels sprout cabbage. Kale arugula melon sierra sea lettuce broccoli celery lotus root carrot leone bologi rutabaga tigernut.</p>
+                  <p>Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence <span><a href="bookstores.html">read more...</a></span></p>
                 </div>
               </div>
             </div>
@@ -25,7 +25,7 @@ class Homepage extends Component {
           <div className='container-fluid'>
             <h2 className='text-center'>Portfolio</h2>
             <hr align='center' width='30%' />
-            <p className='text-center header'>Visit Your Local Bookstores Today!</p>
+            <p className='text-center header'>Visit Your Local Independent Bookstores Today!</p>
             <div className='row no-gutters container-grid'>
 
               <div className='col-md-4 portfolio-item'>
@@ -41,10 +41,10 @@ class Homepage extends Component {
               </div>
 
               <div className='col-md-8 portfolio-item'>
-                <a className='portfolio-link' href='#'>
+                <a className='portfolio-link' href='http://bookmanager.ca/argobks/'>
                   <div className='caption'>
                     <div className='caption-content'>
-                      <h3>Bookstore 2</h3>
+                      <h3>Argo Bookshop</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
@@ -53,10 +53,10 @@ class Homepage extends Component {
               </div>
 
               <div className='col-md-8 portfolio-item'>
-                <a className='portfolio-link' href='#'>
+                <a className='portfolio-link' href='http://www.bibliophilemontreal.com/'>
                   <div className='caption'>
                     <div className='caption-content'>
-                      <h3>Bookstore 3</h3>
+                      <h3>Bibliophile</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
@@ -65,10 +65,10 @@ class Homepage extends Component {
               </div>
 
               <div className='col-md-4 portfolio-item'>
-                <a className='portfolio-link' href='#'>
+                <a className='portfolio-link' href='http://www.encorebooks.ca/'>
                   <div className='caption'>
                     <div className='caption-content'>
-                      <h3>Bookstore 4</h3>
+                      <h3>Encore</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
@@ -77,10 +77,10 @@ class Homepage extends Component {
               </div>
 
               <div className='col-md-4 portfolio-item'>
-                <a className='portfolio-link' href='#'>
+                <a className='portfolio-link' href='http://wordbookstore.ca/'>
                   <div className='caption'>
                     <div className='caption-content'>
-                      <h3>Bookstore 5</h3>
+                      <h3>The Word</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
@@ -88,10 +88,10 @@ class Homepage extends Component {
                 </a>
               </div>
               <div className='col-md-8 portfolio-item'>
-                <a className='portfolio-link' href='#'>
+                <a className='portfolio-link' href='https://lalibrairiedeverdun.com/'>
                   <div className='caption'>
                     <div className='caption-content'>
-                      <h3>Bookstore 6</h3>
+                      <h3>Librairie De Verdun</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
@@ -111,7 +111,7 @@ class Homepage extends Component {
                 <hr align='center' width='30%' />
                 <p>Interested in adding a bookstore yourself? <br />
                     Want to join the team?
-                    <em>Get in touch: <a href='#' className='email'>info@thetravelshelf.com</a></em>
+                    <em>Get in touch: <a href='mailto:info@thetravelshelf.com' className='email'>info@thetravelshelf.com</a></em>
 
                 </p>
 

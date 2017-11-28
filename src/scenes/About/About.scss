@@ -1,9 +1,10 @@
 @import "../../sass/variables.scss";
 @import "../../sass/base.scss";
+
 #about-bookstore {
     margin-top: -50px;
     position: relative;
-    background: url('../img/bs-night-lg-2.jpg') no-repeat 65% 0 fixed;
+    background: url('../../assets/img/About/bs-night-lg-2.jpg') no-repeat 65% 0 fixed;
     max-width: 100%;
     min-height: 350px;
     overflow: hidden;

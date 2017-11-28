@@ -49,6 +49,17 @@ h1 {
   padding-left: 20px;
   padding-right: 20px;
   font-size: 1rem; }
+  #home-heading p span a {
+    color: #ffc107;
+    font-family: "Muli", sans-serif;
+    font-size: 1rem;
+    -o-transition: color .5s ease-out, color 0.5s ease-in;
+    -ms-transition: color .5s ease-out, color 0.5s ease-in;
+    -moz-transition: color .5s ease-out, color 0.5s ease-in;
+    -webkit-transition: color .5s ease-out, color 0.5s ease-in;
+    transition: color .5s ease-out, color 0.5s ease-in; }
+    #home-heading p span a:hover {
+      color: #212529; }
 
 .dark-overlay {
   padding: 100px 0 80px; }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/logo/ts-logo.svg'
+import './Navbar.scss'
 
 const navbar = () => {
   return (
@@ -23,9 +24,9 @@ const navbar = () => {
             <li className='nav-item'>
               <NavLink to='/StoreIndex' exact className='nav-link'>Store Index</NavLink>
             </li>
-            {/* <li className="nav-item"> */}
-            {/* <a href="#contact" className="nav-link">Contact</a> */}
-            {/* </li> */}
+            <li className="nav-item">
+            <NavLink to="/ContactPage" exact className="nav-link">Contact</NavLink>
+            </li>
           </ul>
           <form className='form-inline my-2 my-lg-0'>
             <div className='input-group'>
