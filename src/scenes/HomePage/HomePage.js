@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './HomePage.css'
 import Hero from '../../components/Hero/Hero'
+import StoreArticle from '../../components/StoreArticle/StoreArticle'
 
 class Homepage extends Component {
   render () {
@@ -20,7 +21,6 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
-
         <section id='portfolio'>
           <div className='container-fluid'>
             <h2 className='text-center'>Portfolio</h2>
@@ -136,6 +136,8 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
+
+
 
         <footer id='main-footer' className='text-center p-4'>
           <div className='container'>

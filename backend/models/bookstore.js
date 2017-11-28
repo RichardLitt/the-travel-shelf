@@ -12,7 +12,16 @@ const BookstoreSchema = new mongoose.Schema({
   coffee: {type: Boolean, default: false},
   wifi: {type: Boolean, default: false},
   plugs: {type: Boolean, default: false},
-  events: {type: Boolean, default: false}
+  events: {type: Boolean, default: false},
+  twitter: String,
+  facebook: String,
+  instagram: String,
+  addressCountry: String,
+  addressRegion: String,
+  addressLocality: String,
+  addressPostalCode: String,
+  addressStreetAddress: String,
+  telephone: String
 })
 
 const Bookstore = mongoose.model('Bookstore', BookstoreSchema)
