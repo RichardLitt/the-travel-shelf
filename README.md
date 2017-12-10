@@ -21,7 +21,7 @@ Finally, open http://localhost:3000 to view the app in the browser.
 
 ### Sass
 
-To run Sass, use `npm run watch-sass`.
+To run Sass, use `npm run watch-css`.
 
 ### Testing
 
