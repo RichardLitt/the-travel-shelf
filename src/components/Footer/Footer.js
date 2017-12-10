@@ -8,7 +8,7 @@ const footer = () => {
             <div className="col">
               <p>Coded with <span><i className="fa fa-heart" aria-hidden="true"></i></span> in Montreal, Canada &mdash; Copyright 2017 &copy; Travel Shelf</p>
               <p className="icons">
-                <a href="https://github.com/RichardLitt/the-travel-shelf" className="social"><i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                <a href="https://github.com/RichardLitt/the-travel-shelf" className="social"><i className="fa fa-github fa-2x" aria-hidden="true"></i>
                 </a>
                 <a href="https://www.facebook.com/" className="social"><i className="fa fa-facebook-square fa-2x"  aria-hidden="true"></i>
                 </a>
