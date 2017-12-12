@@ -108,10 +108,8 @@ class Homepage extends Component {
               <div className='col-md-6 align-self-center info-map'>
                 <h3>Want To Know More?</h3>
                 <hr align='center' width='30%' />
-                <p>Interested in adding a bookstore yourself? <br />
-                    Want to join the team?
-                    <em>Get in touch: <a href='mailto:info@thetravelshelf.com' className='email'>info@thetravelshelf.com</a></em>
-
+                <p>Interested in adding a bookstore yourself?<br />
+                    Want to join the team? <em>Get in touch: <a href='mailto:info@thetravelshelf.com' className='email'>info@thetravelshelf.com</a>.</em>
                 </p>
 
                 <h4 className='mailing'>Join Our Mailing List</h4>
@@ -122,8 +120,8 @@ class Homepage extends Component {
                     <label className='sr-only' htmlFor='FormInputGroup'>Sign Up Today</label>
 
                     <div className='input-group mb-2 mb-sm-0'>
-                      <input type='text' className='form-control' id='FormInputGroup' placeholder='Sign Up Today!' />
-                      <div className='input-group-addon'>GO</div>
+                      <input type='text' className='form-control' id='FormInputGroup' placeholder='Your email!' />
+                      <div className='input-group-addon'>Sign Up</div>
                     </div>
                   </div>
                 </form>
@@ -135,8 +133,6 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
-
-
 
         <footer id='main-footer' className='text-center p-4'>
           <div className='container'>
