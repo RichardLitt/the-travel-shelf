@@ -18,28 +18,26 @@ class About extends Component {
             </section>
 
             <section id="about">
-                <div className="container">
-                <div className="row">      
-                        <div className="col-md-6">
-                            <p className="description"><span>
-                            <a href="http://thetravelshelf.com/">The Travel Shelf</a></span> is a joint enterprise by Richard Littauer and students from Les Pitonneux &ndash; LAB12, an alternative bootcamp program in Montréal, Canada. <a href="https://www.linkedin.com/in/richard-littauer-130026138/" className="dev">Richard</a> goes to a lot of bookstores, and wanted a way to talk about those bookstores. The students - <a href="https://www.linkedin.com/in/vernon-lillies-ing-a3172270/" className="dev">Vernon,</a> <a href="https://www.linkedin.com/in/joannakats/" className="dev"> Joanna</a> and <a href="https://www.linkedin.com/in/honeyjafari/" className="dev"> Hanie</a>
-                            &mdash; wanted to build a website together.
-                            This is the result.</p>
-                        </div>
-
-                        <div className="col-md-6">
-                            <p>Richard is an avid bibliophile with a penchant for using words like penchant. He goes to a lot of bookstores, and wanted to write about them. As a web developer, he figured he could just make a website for that, and so he started this project. He lives in Montréal, although he nomads around too.</p>
-                        </div>
-                        <div className="col-md-2"></div>
-                        <div className="col-md-8">
-                        <p className="join">Interested in adding a bookstore, yourself? Want to join the team?
-                        Get in touch.
-                        <a href="mailto:info@thetravelshelf.com" className="info">info@thetravelshelf.com.</a>
-                        </p>
-                        </div>
-                    </div>
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-6 offset-md-3">
+                      <p className="description">
+                        <b>The Travel Shelf</b> is a joint enterprise by Richard Littauer and students from Les Pitonneux &ndash; LAB12, an alternative bootcamp program in Montréal, Canada. <a href="https://burntfen.com" className="dev">Richard</a> goes to a lot of bookstores, and wanted a way to talk about those bookstores. The students - <a href="https://www.linkedin.com/in/vernon-lillies-ing-a3172270/" className="dev">Vernon,</a> <a href="https://www.linkedin.com/in/joannakats/" className="dev"> Joanna</a> and <a href="https://www.linkedin.com/in/honeyjafari/" className="dev"> Hanie</a>
+                        &mdash; wanted to build a website together.
+                        This is the result.
+                      </p>
+                  </div>
                 </div>
-            </section>    
+                <div className="row">
+                  <div className="col-md-6 offset-md-3">
+                    <p className="join">Interested in adding a bookstore, yourself? Want to join the team?
+                    Get in touch.
+                    <a href="mailto:info@thetravelshelf.com" className="info">info@thetravelshelf.com.</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             <section id="team">
                     <div className="container">
@@ -60,7 +58,7 @@ class About extends Component {
                         </p>
                         </div>
                         </div>
-        
+
                         <div className="col-lg-3">
                         <div className="webdeveloper text-center">
                         <img src='img/vernon.jpg' className="img-fluid rounded-circle avatar" alt="Vernon" />
@@ -77,7 +75,7 @@ class About extends Component {
                         </p>
                         </div>
                         </div>
-        
+
                         <div className="col-lg-3">
                         <div className="webdeveloper text-center">
                         <img src="img/ioanna.jpg" className="img-fluid rounded-circle avatar" alt="Ioanna" />
@@ -94,7 +92,7 @@ class About extends Component {
                         </p>
                         </div>
                         </div>
-        
+
                         <div className="col-lg-3">
                         <div className="webdeveloper text-center">
                         <img src="img/hanie.png" className="img-fluid rounded-circle avatar" alt="Hanie" />
@@ -111,7 +109,7 @@ class About extends Component {
                         </p>
                         </div>
                         </div>
-        
+
                     </div>
                     </div>
             </section>
