@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Markdown from 'react-remarkable'
-import './StoreArticle.scss'
 import Form from '../EmailForm/EmailForm'
+import './StoreArticle.scss'
 
 class storeArticle extends Component {
   render () {
@@ -12,7 +12,7 @@ class storeArticle extends Component {
             <div className='container'>
               <div className='row justify-content-center'>
                 <div className='col text-center'>
-                  <h1 className='display-4 myhero text-center'>{this.props.bookstore.name}</h1>
+                  <h1 className='display-4 myhero text-center'>{this.props.name}</h1>
                 </div>
               </div>
             </div>
@@ -24,7 +24,7 @@ class storeArticle extends Component {
               <main id='content' className='col-md-8'>
 
                 <article className='post'>
-                  <Markdown>{this.props.bookstore.review}</Markdown>
+                  <Markdown>{this.props.review}</Markdown>
                 </article>
               </main>
               <aside className='col-md-4'>
@@ -36,25 +36,25 @@ class storeArticle extends Component {
 
                 <div className='widget'>
                   <h4 className='connect'>Info</h4>
-                  <p className='address'><strong>{this.props.bookstore.name}</strong></p>
-                  <p className='address'>{this.props.bookstore.postalAddress.streetAddress}</p>
-                  <p className='address'>{this.props.bookstore.postalAddress.addressLocality}, {this.props.bookstore.postalAddress.addressRegion} {this.props.bookstore.postalAddress.postalCode}</p>
-                  <p className='address'>{this.props.bookstore.postalAddress.addressCountry}</p>
-                  <p className='address'>{this.props.bookstore.telephone}</p>
+                  <p className='address'><strong>{this.props.name}</strong></p>
+                  <p className='address'>{this.props.postalAddress.streetAddress}</p>
+                  <p className='address'>{this.props.postalAddress.addressLocality}, {this.props.postalAddress.addressRegion} {this.props.postalAddress.postalCode}</p>
+                  <p className='address'>{this.props.postalAddress.addressCountry}</p>
+                  <p className='address'>{this.props.telephone}</p>
                   <p className='social'>
-                    {(this.props.bookstore.social.twitter ? <a href={this.props.bookstore.social.twitter}><i className='fa fa-twitter-square' aria-hidden='true' /></a> : null)}
-                    {(this.props.bookstore.social.facebook ? <a href={this.props.bookstore.social.facebook}><i className='fa fa-facebook-square' aria-hidden='true' /></a> : null)}
-                    {(this.props.bookstore.social.instagram ? <a href={this.props.bookstore.social.instagram}><i className='fa fa-instagram' aria-hidden='true' /></a> : null)}
+                    {(this.props.social.twitter ? <a href={this.props.social.twitter}><i className='fa fa-twitter-square' aria-hidden='true' /></a> : null)}
+                    {(this.props.social.facebook ? <a href={this.props.social.facebook}><i className='fa fa-facebook-square' aria-hidden='true' /></a> : null)}
+                    {(this.props.social.instagram ? <a href={this.props.social.instagram}><i className='fa fa-instagram' aria-hidden='true' /></a> : null)}
                   </p>
                 </div>
 
                 <div className='widget'>
                   <h4 className='connect'>Amenities</h4>
                   <p className='social'>
-                    {(this.props.bookstore.amenities.coffee ? <a><i className='fa fa-coffee' aria-hidden='true' /></a> : null)}
-                    {(this.props.bookstore.amenities.wifi ? <a><i className='fa fa-wifi' aria-hidden='true' /></a> : null)}
-                    {(this.props.bookstore.amenities.wifi ? <a><i className='fa fa-plug' aria-hidden='true' /></a> : null)}
-                    {(this.props.bookstore.amenities.wifi ? <a><i className='fa fa-calendar' aria-hidden='true' /></a> : null)}
+                    {(this.props.amenities.coffee ? <a><i className='fa fa-coffee' aria-hidden='true' /></a> : null)}
+                    {(this.props.amenities.wifi ? <a><i className='fa fa-wifi' aria-hidden='true' /></a> : null)}
+                    {(this.props.amenities.wifi ? <a><i className='fa fa-plug' aria-hidden='true' /></a> : null)}
+                    {(this.props.amenities.wifi ? <a><i className='fa fa-calendar' aria-hidden='true' /></a> : null)}
                   </p>
                 </div>
               </aside>

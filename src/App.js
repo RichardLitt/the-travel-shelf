@@ -23,7 +23,6 @@ class App extends Component {
           <Route path='/ContactPage' component={ContactPage} />
           <Route path='/StoreIndex' exact component={StoreIndex} />
           <Route path='/StoreIndex/:name' component={Store} />
-
         </div>
       </Router>
     )

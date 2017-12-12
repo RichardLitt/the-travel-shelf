@@ -43,15 +43,18 @@
     "express": "^4.15.5",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "mongoose": "^4.13.4",
+    "mongoose": "^4.13.7",
     "node-sass-chokidar": "0.0.3",
     "popper.js": "^1.13.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-mailchimp-subscribe": "^1.0.3",
+    "react-redux": "^5.0.6",
     "react-remarkable": "^1.1.3",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "npm run build-css && concurrently \"react-scripts start\" \"npm run backend\"",
