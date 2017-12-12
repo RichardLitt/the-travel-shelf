@@ -11,6 +11,10 @@
     "bookstores",
     "index"
   ],
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.5.1"
+  },
   "author": "Richard Littauer <richard.littauer@gmail.com> (https://burntfen.com)",
   "contributors": [
     "Joanna Katsifaraki <joannakatsifaraki@gmail.com> (http://joannakatswebdeveloper.com)",
@@ -33,6 +37,7 @@
   "dependencies": {
     "body-parser": "~1.18.2",
     "bootstrap": "4.0.0-beta",
+    "concurrently": "^3.5.1",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.15.5",
@@ -49,7 +54,7 @@
     "react-scripts": "1.0.14"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build-css && concurrently \"react-scripts start\" \"npm run backend\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
