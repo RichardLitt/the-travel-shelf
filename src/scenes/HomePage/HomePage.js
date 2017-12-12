@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './HomePage.css'
 import Hero from '../../components/Hero/Hero'
+import Form from '../../components/EmailForm/EmailForm'
 
 class Homepage extends Component {
   render () {
@@ -115,16 +116,8 @@ class Homepage extends Component {
                 <h4 className='mailing'>Join Our Mailing List</h4>
                 <p>Keep up-to-date with the latest news!</p>
 
-                <form action='' className='form-inline justify-content-center'>
-                  <div className='col-auto signup'>
-                    <label className='sr-only' htmlFor='FormInputGroup'>Sign Up Today</label>
+                <Form />
 
-                    <div className='input-group mb-2 mb-sm-0'>
-                      <input type='text' className='form-control' id='FormInputGroup' placeholder='Your email!' />
-                      <div className='input-group-addon'>Sign Up</div>
-                    </div>
-                  </div>
-                </form>
               </div>
 
               <div className='col-md-6 map'>
