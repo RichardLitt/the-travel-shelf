@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Markdown from 'react-remarkable'
 import './StoreArticle.scss'
+import Form from '../EmailForm/EmailForm'
 
 class storeArticle extends Component {
   render () {
@@ -30,18 +31,7 @@ class storeArticle extends Component {
                 <div className='widget'>
                   <h4>Join Our Mailing List</h4>
                   <p>Keep up-to-date with the latest news!</p>
-                  <form>
-                    <div className='row'>
-                      <div className='form-row align-items-center'>
-                        <div className='col-xs-3 theInput'>
-                          <div className='input-group mb-2 mb-sm-0'>
-                            <input className='form-control form-control-sm' type='text' placeholder='Sign Up Today' />
-                            <div className='input-group-addon'>GO</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+                  <Form />
                 </div>
 
                 <div className='widget'>
