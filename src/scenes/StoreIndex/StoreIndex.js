@@ -1,33 +1,28 @@
 import React, { Component } from 'react'
-import './StoreIndex.css'
+import { connect } from 'react-redux'
 import StoreCard from '../../components/StoreCard/StoreCard'
-import '../../components/StoreCard/StoreCard.css'
+import './StoreIndex.css'
+import * as actionCreators from '../../store/actions/index'
 
 class StoreIndex extends Component {
-  state = {
-    stores: null
-  }
 
   componentDidMount() {
-    console.log('Didmount')
-    fetch('/api/bookstores')
-      .then(res => res.json())
-      .then(stores => this.setState({ stores }))
-      .then(() => console.log(this.state.stores))
+    this.props.fetchStores();
   }
 
   storeSelectHandler = (name) => {
+    this.props.onStoreSelect(name)
     this.props.history.push({pathname: this.props.match.url + '/' + name})
   }
 
   render () {
     let stores = null
 
-    if(this.state.stores){
-      stores =  this.state.stores.map(store => (
+    if(this.props.stores){
+      stores =  this.props.stores.map(store => (
             <StoreCard
               {...store}
-              clicked={() => this.storeSelectHandler(store.bookstore.name)}
+              clicked={() => this.storeSelectHandler(store.name)}
             />
         )
       )
@@ -48,4 +43,17 @@ class StoreIndex extends Component {
   }
 }
 
-export default StoreIndex
+const mapStateToProps = state => {
+  return {
+    stores: state.stores
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchStores: () => dispatch(actionCreators.fetchStores()),
+    onStoreSelect: (name) => dispatch(actionCreators.selectStore(name))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (StoreIndex)

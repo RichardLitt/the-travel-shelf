@@ -1,33 +1,15 @@
 import React, { Component } from 'react'
-import './Store.css'
+import { connect } from 'react-redux'
 import StoreArticle from '../../components/StoreArticle/StoreArticle'
+import './Store.css'
 
 class Store extends Component {
-
-  state = {
-    store: null,
-    name: ''
-  }
-
-  componentWillMount() {
-    console.log(this.props.match.params)
-    this.setState({name: this.props.match.params.name})
-  }
-
-  componentDidMount() {
-    console.log(this.state.name)
-    fetch('/api/bookstores/' + this.state.name )
-      .then(res => res.json())
-      .then(store => this.setState({ store }))
-  }
-
   render () {
-    let content = null;
+    let content = null
 
-    if(this.state.store){
-      console.log(this.state.store)
+    if (this.props.store) {
       content = (
-        <StoreArticle {...this.state.store}/>
+        <StoreArticle {...this.props.store}/>
       )
     }
 
@@ -39,4 +21,10 @@ class Store extends Component {
   }
 }
 
-export default Store
+const mapStateToProps = state => {
+  return {
+    store: state.selectedStore
+  }
+}
+
+export default connect(mapStateToProps) (Store)
