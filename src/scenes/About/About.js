@@ -64,7 +64,7 @@ class About extends Component {
                         <img src='img/vernon.jpg' className="img-fluid rounded-circle avatar" alt="Vernon" />
                         <h4>Vernon Lillies</h4>
                         <p className="text-muted">Full Stack <br />Web Developer</p>
-                        <p className="bio">Sartorial photo booth salvia single-origin coffee fixie typewriter deep cliche iceland coffee photo booth fixie typewriter.</p>
+                        <p className="bio">Full stack developer with a passion for applying technology to solve real world problems. Flying robots, renewable energy, construction…</p>
                         <p className="icons">
                           <a href="https://github.com/VernL" className="social"><i className="fa fa-github fa-2x" aria-hidden="true"></i>
                           </a>
