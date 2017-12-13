@@ -25,7 +25,7 @@ const navbar = () => {
               <NavLink to='/StoreIndex' exact className='nav-link'>Store Index</NavLink>
             </li>
             <li className="nav-item">
-            <NavLink to="/ContactPage" exact className="nav-link">Contact</NavLink>
+            <NavLink to="/Contact" exact className="nav-link">Contact</NavLink>
             </li>
           </ul>
           <form className='form-inline my-2 my-lg-0'>

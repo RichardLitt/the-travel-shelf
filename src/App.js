@@ -6,7 +6,6 @@ import Navbar from './components/Navbar/Navbar'
 import ContactPage from './scenes/ContactPage/ContactPage'
 import About from './scenes/About/About'
 
-
 import {
     BrowserRouter as Router,
     Route
@@ -20,7 +19,7 @@ class App extends Component {
           <Navbar />
           <Route exact path='/' component={HomePage} />
           <Route path='/About' component={About} />
-          <Route path='/ContactPage' component={ContactPage} />
+          <Route path='/Contact' component={ContactPage} />
           <Route path='/StoreIndex' exact component={StoreIndex} />
           <Route path='/StoreIndex/:name' component={Store} />
         </div>
