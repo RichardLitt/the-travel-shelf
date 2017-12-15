@@ -32,7 +32,6 @@
     "gulp-sass": "^3.1.0",
     "standard": "^10.0.3"
   },
-  "homepage": "https://github.com/RichardLitt/the-travel-shelf",
   "private": true,
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -57,13 +56,15 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "npm run build-css && concurrently \"react-scripts start\" \"npm run backend\"",
+    "start": "npm run backend",
+    "dev": "concurrently \"npm run backend\" \"react-scripts start\"  \"npm run watch-css\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "backend": "node ./backend/bin/www",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build-css && npm run build"
   },
   "proxy": "http://localhost:3001"
 }
