@@ -32,11 +32,11 @@ class Homepage extends Component {
                 <a className='portfolio-link' href='https://www.drawnandquarterly.com/'>
                   <div className='caption'>
                     <div className='caption-content'>
-                      <h3>Drawn and Quaterly</h3>
+                      <h3>Drawn and Quarterly</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
-                  <img src='img/book6.jpg' className='img-fluid' alt='Book store' />
+                  <img src='img/dq-store.jpg' className='img-fluid' alt='Inside Drawn and Quarterlys Bookstore' />
                 </a>
               </div>
 
