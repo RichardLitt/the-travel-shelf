@@ -7,15 +7,13 @@
 Built with a React front-end using Sass and a Node/Express backend
 Persistent data stored in a MongoDB database hosted on mlab.com
 
-The Database URI connection scheme is loaded as an environment variable named `MONGODB_URI` from a `.env` file located in the root directory. To start, `touch .env` and then get a connection scheme URI from either your own database, or mLab, or by contacting @VernL.
+The Database URI connection scheme is loaded as an environment variable named `MONGODB_URI`. In a local environment, the `MONGODB_URI` variable can be loaded from a `.env` file located in the root directory. To start, `touch .env` and then get a connection scheme URI from either your own database, or mLab, or by contacting @VernL.
 
 Node version: v8.9.1.
 
 Run `npm install` to install dependencies.
 
-Then `npm run backend` to launch backend.
-
-In a new tab, `npm start` to run app in development mode.
+Run `npm run dev` to run app in development mode.
 
 Finally, open http://localhost:3000 to view the app in the browser.
 
