@@ -9,7 +9,7 @@ class Store extends Component {
 
     if (this.props.store) {
       content = (
-        <StoreArticle {...this.props.store}/>
+        <StoreArticle {...this.props.store} />
       )
     }
 
@@ -27,4 +27,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps) (Store)
+export default connect(mapStateToProps)(Store)

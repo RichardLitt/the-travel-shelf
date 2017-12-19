@@ -14,7 +14,7 @@ const hero = () => {
                 XOXO crucifix. Echo park farm-to-table ugh tote bag actually helvetica air plant hexagon listicle
                 tousled vaporware lomo.</p>
               <NavLink to='/Contact' className='btn btn-outline-warning btn-lg read'><i
-                className='fa fa-arrow-right'/> Read More</NavLink>
+                className='fa fa-arrow-right' /> Read More</NavLink>
             </div>
           </div>
         </div>

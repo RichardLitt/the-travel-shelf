@@ -28,5 +28,3 @@ export const fetchStores = () => {
       .catch(error => console.log('Error Fetching Stores', error))
   }
 }
-
-
