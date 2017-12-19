@@ -18,14 +18,14 @@ const navbar = () => {
             <li className='nav-item'>
               <NavLink to='/' exact className='nav-link'>Home</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to='/About' className="nav-link">About</NavLink>
+            <li className='nav-item'>
+              <NavLink to='/About' className='nav-link'>About</NavLink>
             </li>
             <li className='nav-item'>
               <NavLink to='/StoreIndex' exact className='nav-link'>Store Index</NavLink>
             </li>
-            <li className="nav-item">
-            <NavLink to="/Contact" exact className="nav-link">Contact</NavLink>
+            <li className='nav-item'>
+              <NavLink to='/Contact' exact className='nav-link'>Contact</NavLink>
             </li>
           </ul>
           <form className='form-inline my-2 my-lg-0'>

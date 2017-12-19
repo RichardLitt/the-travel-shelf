@@ -15,7 +15,7 @@ class Homepage extends Component {
                 <div className='container leaf'>
                   <h2 className='mb-4'>Welcome To The Travel Shelf</h2>
                   <hr align='center' width='30%' />
-                  <p>Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence <span><a href="bookstores.html">read more...</a></span></p>
+                  <p>Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence <span><a href='bookstores.html'>read more...</a></span></p>
                 </div>
               </div>
             </div>
