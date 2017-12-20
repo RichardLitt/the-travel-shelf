@@ -23,8 +23,8 @@ class storeArticle extends Component {
             <div className='row' id='primary'>
               <main id='content' className='col-md-8'>
 
-                <article className='post'>
-                  <Markdown>{this.props.review}</Markdown>
+                <article className='post' style={{padding: '30px 20px', marginBottom: '40px'}}>
+                  <Markdown >{this.props.review}</Markdown>
                 </article>
               </main>
               <aside className='col-md-4'>
