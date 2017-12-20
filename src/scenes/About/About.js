@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Footer from '../../components/Footer/Footer'
 import './About.css'
 
 class About extends Component {
@@ -50,11 +51,11 @@ class About extends Component {
                   <p className='bio'>Full stack developer, nomad, poet, sailor, linguist, writer, and runner. Always making new projects, always iterating on the old ones.</p>
                   <p className='icons'>
                     <a href='https://github.com/RichardLitt' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://twitter.com/richlitt' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://www.linkedin.com/in/richard-littauer-130026138/' className='social'><i className='fa fa-linkedin-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -67,11 +68,11 @@ class About extends Component {
                   <p className='bio'>Full stack developer with a passion for applying technology to solve real world problems. Flying robots, renewable energy, construction…</p>
                   <p className='icons'>
                     <a href='https://github.com/VernL' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://twitter.com/' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://www.linkedin.com/in/vernon-lillies-ing-a3172270/' className='social'><i className='fa fa-linkedin-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -84,11 +85,11 @@ class About extends Component {
                   <p className='bio'>Love designing, coding and developing responsive websites, drinking lattes, green tea, listening to lounge, jazz, running and playing tennis.</p>
                   <p className='icons'>
                     <a href='https://github.com/Jojokats' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://twitter.com/Joanna_Kts' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://www.linkedin.com/in/joannakats/' className='social'><i className='fa fa-linkedin-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -101,11 +102,11 @@ class About extends Component {
                   <p className='bio'>Sartorial photo booth salvia single-origin coffee fixie typewriter deep cliche iceland coffee photo booth fixie typewriter.</p>
                   <p className='icons'>
                     <a href='https://github.com/ZJaf' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://twitter.com/' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                     <a href='https://www.linkedin.com/in/honeyjafari/' className='social'><i className='fa fa-linkedin-square fa-2x' aria-hidden='true' />
-                      </a>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -113,6 +114,7 @@ class About extends Component {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
     )
   }
