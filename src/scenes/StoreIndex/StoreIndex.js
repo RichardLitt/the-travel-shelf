@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import StoreCard from '../../components/StoreCard/StoreCard'
+import Footer from '../../components/Footer/Footer'
 import './StoreIndex.css'
 import * as actionCreators from '../../store/actions/index'
 
@@ -47,6 +48,7 @@ class StoreIndex extends Component {
             {stores}
           </div>
         </section>
+        <Footer />
       </div>
     )
   }
