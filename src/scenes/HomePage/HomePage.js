@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './HomePage.css'
 import Hero from '../../components/Hero/Hero'
 import Form from '../../components/EmailForm/EmailForm'
+import Footer from '../../components/Footer/Footer'
 
 class Homepage extends Component {
   render () {
@@ -126,28 +127,7 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
-
-        <footer id='main-footer' className='text-center p-4'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col'>
-                <p>Copyright 2017 &copy; The Travel Shelf</p>
-                <p className='icons'>
-                  <a href='https://www.facebook.com/' className='social'><i className='fa fa-facebook-square fa-2x' aria-hidden='true' />
-                  </a>
-                  <a href='https://twitter.com/' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
-                  </a>
-                  <a href='https://www.instagram.com/' className='social'><i className='fa fa-instagram fa-2x' aria-hidden='true' />
-                  </a>
-                  <a href='https://github.com/RichardLitt/the-travel-shelf' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
-                  </a>
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </footer>
-
+        <Footer />
       </div>
     )
   }

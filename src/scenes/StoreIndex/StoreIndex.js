@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import StoreCard from '../../components/StoreCard/StoreCard'
+import Footer from '../../components/Footer/Footer'
 import './StoreIndex.css'
 import * as actionCreators from '../../store/actions/index'
 
@@ -29,15 +30,25 @@ class StoreIndex extends Component {
     }
 
     return (
-      <div className="container">
-        <header className='Index-header'>
-          <h1 className='Index-title' style={{textAlign: 'center'}}>Store Index</h1>
-        </header>
-        <section>
-          <div className='row'>
+      <div>
+        <section id='index-bookstore' className='py-5 text-white' data-type='background' data-speed='2'>
+        <div className='primary-overlay'>
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <div className='col text-center'>
+                <h1 className='display-4 myhero text-center'>Store Index</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{padding: '100px'}}>
+        <div className='row justify-content-center'>
             {stores}
           </div>
         </section>
+        <Footer />
       </div>
     )
   }

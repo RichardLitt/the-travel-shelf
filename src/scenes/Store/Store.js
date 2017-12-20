@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import StoreArticle from '../../components/StoreArticle/StoreArticle'
+import Footer from '../../components/Footer/Footer'
 import './Store.css'
 
 class Store extends Component {
@@ -16,6 +17,7 @@ class Store extends Component {
     return (
       <div>
         {content}
+        <Footer />
       </div>
     )
   }
