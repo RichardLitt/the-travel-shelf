@@ -28,11 +28,6 @@ const navbar = () => {
               <NavLink to='/Contact' exact className='nav-link'>Contact</NavLink>
             </li>
           </ul>
-          <form className='form-inline my-2 my-lg-0'>
-            <div className='input-group'>
-              <input type='text' className='form-control search' placeholder='Search' aria-label='Username' aria-describedby='basic-addon1' />
-            </div>
-          </form>
         </div>
       </div>
     </nav>
