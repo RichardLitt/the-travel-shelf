@@ -10,12 +10,6 @@ const footer = () => {
             <p className='icons'>
               <a href='https://github.com/RichardLitt/the-travel-shelf' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
               </a>
-              <a href='https://www.facebook.com/' className='social'><i className='fa fa-facebook-square fa-2x' aria-hidden='true' />
-              </a>
-              <a href='https://twitter.com/' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
-              </a>
-              <a href='https://www.linkedin.com/' className='social'><i className='fa fa-instagram fa-2x' aria-hidden='true' />
-              </a>
             </p>
           </div>
         </div>
