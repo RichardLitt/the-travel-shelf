@@ -35,14 +35,6 @@ class ContactPage extends Component {
               </div>
             </div>
 
-            <div className='row'>
-              <div className='col-md' />
-              <div className='col-md'>
-                <img src='img/icon-books.svg' alt='icon-books' className='icon-books' />
-              </div>
-              <div className='col-md' />
-            </div>
-
           </div>
         </section>
 
