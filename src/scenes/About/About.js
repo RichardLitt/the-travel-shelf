@@ -99,7 +99,8 @@ class About extends Component {
                   <img src='img/hanie.png' className='img-fluid rounded-circle avatar' alt='Hanie' />
                   <h4>Hanie Jafari</h4>
                   <p className='text-muted'>Full Stack <br />Web Developer</p>
-                  <p className='bio'>Sartorial photo booth salvia single-origin coffee fixie typewriter deep cliche iceland coffee photo booth fixie typewriter.</p>
+                  <p className='bio'>
+Full-stack developer, UX/UI follower, Marketing, Strategy, startups. Loves innovative solutions. Always excited to learn more. Enjoys Yoga, swimming, cooking and hanging out with friends.</p>
                   <p className='icons'>
                     <a href='https://github.com/ZJaf' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
                       </a>
