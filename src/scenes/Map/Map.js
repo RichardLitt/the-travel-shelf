@@ -1,9 +1,26 @@
 import React, {Component} from 'react'
+import Footer from '../../components/Footer/Footer'
 import './Map.css'
 
-import Footer from '../../components/Footer/Footer'
+import {select, selectAll} from "d3-selection"
 
 class Map extends Component {
+
+  componentDidMount() {
+    const svgWidth = 960
+    const svgHeight = 600
+    const svg = (
+      select(this.svg)
+        .attr('width', svgWidth)
+        .attr('height', svgHeight)
+        .append('g')
+    )
+  }
+
+  shouldComponentUpdate() {
+    return false; // This prevents future re-renders of this component
+  }
+
   render(){
     return (
       <div>
@@ -19,6 +36,8 @@ class Map extends Component {
             </div>
           </div>
         </section>
+
+        <svg ref={(elem) => { this.svg = elem }} />
 
         <Footer />
       </div>
