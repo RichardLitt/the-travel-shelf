@@ -48,11 +48,7 @@ class Map extends Component {
           .append('g')
       )
 
-      console.log(svg)
-
       const g = svg.append('g')
-
-      console.log(g)
 
       const projection = geoMercator()
         .rotate([0, -30, 0]).fitSize([svgWidth, svgHeight], geojsonFiles[0].geojson)
@@ -79,7 +75,6 @@ class Map extends Component {
   }
 
   shouldComponentUpdate() {
-    console.log('didupdate')
     return false
   }
 
@@ -99,7 +94,13 @@ class Map extends Component {
           </div>
         </section>
 
-        <svg ref={(elem) => { this.svg = elem }} />
+        <section id='map'>
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <svg ref={(elem) => { this.svg = elem }} />
+            </div>
+          </div>
+        </section>
 
         <Footer />
       </div>
