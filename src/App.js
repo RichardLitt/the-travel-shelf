@@ -6,7 +6,10 @@ import Store from './scenes/Store/Store'
 import Navbar from './components/Navbar/Navbar'
 import ContactPage from './scenes/ContactPage/ContactPage'
 import About from './scenes/About/About'
+
 import * as actionCreators from './store/actions/index'
+
+import Map from './scenes/Map/Map'
 
 import {
     BrowserRouter as Router,
@@ -29,6 +32,7 @@ class App extends Component {
           <Route path='/Contact' component={ContactPage} />
           <Route path='/StoreIndex' exact component={StoreIndex} />
           <Route path='/StoreIndex/:name' component={Store} />
+          <Route path='/Map' component={Map} />
         </div>
       </Router>
     )
