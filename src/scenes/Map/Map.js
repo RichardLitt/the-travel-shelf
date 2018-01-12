@@ -3,12 +3,19 @@ import MapView from '../../components/MapView/MapView'
 import Footer from '../../components/Footer/Footer'
 import { connect } from 'react-redux'
 import './Map.css'
+import * as actionCreators from '../../store/actions/index'
 
 class Map extends Component {
+
+  storeSelectHandler = (name) => {
+    this.props.onStoreSelect(name)
+    this.props.history.push({pathname: /StoreIndex/ + name})
+  }
+
   render () {
     let mapView = null
     if (this.props.stores) {
-      mapView = <MapView stores={this.props.stores} />
+      mapView = <MapView stores={this.props.stores} clicked={this.storeSelectHandler} />
     }
     return (
       <div>
@@ -36,4 +43,10 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Map)
+const mapDispatchToProps = dispatch => {
+  return {
+    onStoreSelect: (name) => dispatch(actionCreators.selectStore(name))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Map)
