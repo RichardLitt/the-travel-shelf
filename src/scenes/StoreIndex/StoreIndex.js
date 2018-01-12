@@ -7,10 +7,6 @@ import * as actionCreators from '../../store/actions/index'
 
 class StoreIndex extends Component {
 
-  componentDidMount() {
-    this.props.fetchStores();
-  }
-
   storeSelectHandler = (name) => {
     this.props.onStoreSelect(name)
     this.props.history.push({pathname: this.props.match.url + '/' + name})
@@ -62,7 +58,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchStores: () => dispatch(actionCreators.fetchStores()),
     onStoreSelect: (name) => dispatch(actionCreators.selectStore(name))
   }
 }

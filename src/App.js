@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import HomePage from './scenes/HomePage/HomePage'
 import StoreIndex from './scenes/StoreIndex/StoreIndex'
 import Store from './scenes/Store/Store'
 import Navbar from './components/Navbar/Navbar'
 import ContactPage from './scenes/ContactPage/ContactPage'
 import About from './scenes/About/About'
+import * as actionCreators from './store/actions/index'
 
 import {
     BrowserRouter as Router,
@@ -12,6 +14,11 @@ import {
 } from 'react-router-dom'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchStores()
+  }
+
   render () {
     return (
       <Router>
@@ -28,4 +35,10 @@ class App extends Component {
   }
 }
 
-export default App
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchStores: () => dispatch(actionCreators.fetchStores())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App)
