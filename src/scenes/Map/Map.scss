@@ -28,16 +28,12 @@
   }
 }
 
-.adminRegion {
-  fill: grey;
-  opacity: 0.1;
-  stroke: white;
-  stroke-width: 2px;
+#map {
+  padding-bottom: 70px;
 }
 
-.neighbourhood {
-  stroke: white;
-  stroke-width: 2px;
-  fill: #9dddff;
-  opacity: .6;
+.adminRegion {
+  stroke: black;
+  stroke-width: 1px;
+  fill:none
 }
