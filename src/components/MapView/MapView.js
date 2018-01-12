@@ -88,13 +88,17 @@ class MapView extends Component {
         .data(this.props.stores)
         .enter()
         .append('circle')
+        .classed('bookstores', true)
         .attr('cx', d => projection([d.coordinates.long, d.coordinates.lat])[0])
         .attr('cy', d => projection([d.coordinates.long, d.coordinates.lat])[1])
         .attr('r', '8px')
-        .style('fill', 'red')
         .on('mousemove', handleMouseMoveStores)
         .on('mouseout', handleMouseOutStores)
-        .on('click', handleMouseClickStores)
+        .on('click', (d) => {
+          tooltip
+            .classed('active', false)
+          this.props.clicked(d.name)
+        })
 
       function handleMouseMoveStations(d) {
         tooltip
@@ -122,11 +126,6 @@ class MapView extends Component {
         tooltip
           .classed('active', false)
       }
-
-      function handleMouseClickStores(){
-        tooltip
-          .classed('active', false)
-      }
     }
   }
 
@@ -134,19 +133,18 @@ class MapView extends Component {
     return false
   }
 
-
-  render(){
+  render () {
     return (
       <section id='map'>
-          <div className='row justify-content-center'>
-            <div className='col-12 text-center'>
-              <h1>Montreal</h1>
-            </div>
-            <div className='col-12 text-center'>
-              <svg ref={(elem) => { this.svg = elem }} />
-              <div className='tooltip' ref={(elem) => { this.div = elem }} />
-            </div>
+        <div className='row justify-content-center'>
+          <div className='col-12 text-center'>
+            <h1>Montreal</h1>
           </div>
+          <div className='col-12 text-center'>
+            <svg ref={(elem) => { this.svg = elem }} />
+            <div className='tooltip' ref={(elem) => { this.div = elem }} />
+          </div>
+        </div>
       </section>
     )
   }
