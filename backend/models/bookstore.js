@@ -26,7 +26,8 @@ const BookstoreSchema = new mongoose.Schema({
     addressLocality: String,
     postalCode: String,
     streetAddress: String
-  }
+  },
+  coordinates: {long: Number, lat: Number}
 })
 
 const Bookstore = mongoose.model('Bookstore', BookstoreSchema)
