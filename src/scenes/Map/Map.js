@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Footer from '../../components/Footer/Footer'
 import './Map.css'
 
-import { select } from 'd3-selection'
+import * as d3 from 'd3-selection'
 import { queue } from 'd3-queue'
 import { json } from 'd3-request'
 import { geoPath, geoMercator } from 'd3-geo'
@@ -10,6 +10,8 @@ import { geoPath, geoMercator } from 'd3-geo'
 class Map extends Component {
 
   componentDidMount() {
+
+    console.log(d3)
 
     const geojsonFiles = [
       {name: 'adminRegions', path: 'http://donnees.ville.montreal.qc.ca/dataset/00bd85eb-23aa-4669-8f1b-ba9a000e3dd8/resource/e9b0f927-8f75-458c-8fda-b5da65cc8b73/download/limadmin.json', geojson: ""},
@@ -41,14 +43,19 @@ class Map extends Component {
 
       const svgWidth = 960
       const svgHeight = 600
+
       const svg = (
-        select(this.svg)
+        d3.select(this.svg)
           .attr('width', svgWidth)
           .attr('height', svgHeight)
           .append('g')
       )
 
       const g = svg.append('g')
+
+      const tooltip = (
+        d3.select('.tooltip')
+      )
 
       const projection = geoMercator()
         .rotate([0, -30, 0]).fitSize([svgWidth, svgHeight], geojsonFiles[0].geojson)
@@ -71,6 +78,21 @@ class Map extends Component {
         .append('path')
         .attr('d', path)
         .classed('stations', true)
+        .on('mousemove', handleMouseMoveStations)
+        .on('mouseout', handleMouseOutStations)
+
+      function handleMouseMoveStations(d) {
+        tooltip
+          .classed('active', true)
+          .style('left', d3.mouse(svg.node())[0] + 10 + 'px')
+          .style('top', d3.mouse(svg.node())[1] - (tooltip.node().offsetHeight + 10) + 'px')
+          .html(`<p>${d.properties.DESC_LIEU}</p>`)
+      }
+
+      function handleMouseOutStations() {
+        tooltip
+          .classed('active', false)
+      }
     }
   }
 
@@ -102,6 +124,7 @@ class Map extends Component {
               </div>
               <div className='col-12 text-center'>
                 <svg ref={(elem) => { this.svg = elem }} />
+                <div className='tooltip' ref={(elem) => { this.div = elem }} />
               </div>
             </div>
           </div>
