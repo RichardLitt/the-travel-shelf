@@ -32,7 +32,7 @@ class StoreIndex extends Component {
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col text-center'>
-                <h1 className='display-4 myhero text-center'>Store Index</h1>
+                <h1 className='display-4 myhero text-center'>Stores</h1>
               </div>
             </div>
           </div>

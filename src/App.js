@@ -30,8 +30,8 @@ class App extends Component {
           <Route exact path='/' component={HomePage} />
           <Route path='/About' component={About} />
           <Route path='/Contact' component={ContactPage} />
-          <Route path='/StoreIndex' exact component={StoreIndex} />
-          <Route path='/StoreIndex/:name' component={Store} />
+          <Route path='/Stores' exact component={StoreIndex} />
+          <Route path='/Stores/:name' component={Store} />
           <Route path='/Map' component={Map} />
         </div>
       </Router>
