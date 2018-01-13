@@ -6,6 +6,7 @@ import policeStations from '../../assets/data/pdq_point.json'
 
 import * as d3 from 'd3-selection'
 import { geoPath, geoMercator } from 'd3-geo'
+import { zoom } from 'd3-zoom'
 
 class MapView extends Component {
 
@@ -18,8 +19,27 @@ class MapView extends Component {
       d3.select(this.svg)
         .attr('width', svgWidth)
         .attr('height', svgHeight)
-        .append('g')
     )
+
+    const zoomHandler = zoom()
+      .scaleExtent([1, 4])
+      .on('zoom', zoomed)
+
+    svg
+      .call(zoomHandler)
+      .on('wheel', function() { d3.event.preventDefault(); });
+
+    function zoomed(){
+      g.attr('transform', d3.event.transform)
+
+      g
+        .selectAll('.bookstores')
+        .attr('r', 8 / d3.event.transform.k + 'px')
+
+      g
+        .selectAll('.stations')
+        .attr('r', 5 / d3.event.transform.k + 'px')
+    }
 
     const g = svg.append('g')
 
@@ -47,8 +67,10 @@ class MapView extends Component {
       .selectAll('.stations')
       .data(policeStations.features)
       .enter()
-      .append('path')
-      .attr('d', path)
+      .append('circle')
+      .attr('cx', d => projection(d.geometry.coordinates)[0])
+      .attr('cy', d => projection(d.geometry.coordinates)[1])
+      .attr('r', '5px')
       .classed('stations', true)
       .on('mousemove', handleMouseMoveStations)
       .on('mouseout', handleMouseOutStations)
