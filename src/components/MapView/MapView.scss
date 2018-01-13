@@ -5,8 +5,17 @@
   padding-bottom: 70px;
 }
 
+h1 {
+  margin-bottom: 24px;
+}
+
 .bookstores {
   fill: rgb(20, 79, 122);
+}
+
+svg{
+  border: 2px solid rgb(20, 79, 122);
+  pointer-events: all;
 }
 
 .adminRegion {
