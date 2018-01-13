@@ -28,11 +28,11 @@ class App extends Component {
         <div>
           <Navbar />
           <Route exact path='/' component={HomePage} />
-          <Route path='/About' component={About} />
-          <Route path='/Contact' component={ContactPage} />
-          <Route path='/Stores' exact component={StoreIndex} />
-          <Route path='/Stores/:name' component={Store} />
-          <Route path='/Map' component={Map} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={ContactPage} />
+          <Route path='/stores' exact component={StoreIndex} />
+          <Route path='/stores/:name' component={Store} />
+          <Route path='/map' component={Map} />
         </div>
       </Router>
     )
