@@ -42,19 +42,19 @@ class storeArticle extends Component {
                   <p className='address'>{this.props.postalAddress.addressCountry}</p>
                   <p className='address'>{this.props.telephone}</p>
                   <p className='social'>
-                    {(this.props.social.twitter ? <a href={this.props.social.twitter}><i className='fa fa-twitter-square' aria-hidden='true' /></a> : null)}
-                    {(this.props.social.facebook ? <a href={this.props.social.facebook}><i className='fa fa-facebook-square' aria-hidden='true' /></a> : null)}
-                    {(this.props.social.instagram ? <a href={this.props.social.instagram}><i className='fa fa-instagram' aria-hidden='true' /></a> : null)}
+                    {(this.props.social.twitter ? <a href={this.props.social.twitter}><i className='fa fa-twitter-square' /></a> : null)}
+                    {(this.props.social.facebook ? <a href={this.props.social.facebook}><i className='fa fa-facebook-square' /></a> : null)}
+                    {(this.props.social.instagram ? <a href={this.props.social.instagram}><i className='fa fa-instagram' /></a> : null)}
                   </p>
                 </div>
 
                 <div className='widget'>
                   <h4 className='connect'>Amenities</h4>
                   <p className='social'>
-                    {(this.props.amenities.coffee ? <a><i className='fa fa-coffee' aria-hidden='true' /></a> : null)}
-                    {(this.props.amenities.wifi ? <a><i className='fa fa-wifi' aria-hidden='true' /></a> : null)}
-                    {(this.props.amenities.wifi ? <a><i className='fa fa-plug' aria-hidden='true' /></a> : null)}
-                    {(this.props.amenities.wifi ? <a><i className='fa fa-calendar' aria-hidden='true' /></a> : null)}
+                    {(this.props.amenities.coffee ? <i className='fa fa-coffee' aria-hidden='true' /> : null)}
+                    {(this.props.amenities.wifi ? <i className='fa fa-wifi' aria-hidden='true' /> : null)}
+                    {(this.props.amenities.plug ? <i className='fa fa-plug' aria-hidden='true' /> : null)}
+                    {(this.props.amenities.calendar ? <i className='fa fa-calendar' aria-hidden='true' /> : null)}
                   </p>
                 </div>
               </aside>
