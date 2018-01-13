@@ -9,7 +9,7 @@ class Map extends Component {
 
   storeSelectHandler = (name) => {
     this.props.onStoreSelect(name)
-    this.props.history.push({pathname: /StoreIndex/ + name})
+    this.props.history.push({pathname: /stores/ + name})
   }
 
   render () {
