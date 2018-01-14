@@ -5,19 +5,33 @@
   padding-bottom: 70px;
 }
 
+h1 {
+  margin-bottom: 24px;
+}
+
+svg {
+  border: 1px solid rgb(20, 79, 122);
+}
+
 .adminRegion {
   stroke: black;
   stroke-width: 1px;
-  fill:none;
+  fill:white;
 }
 
 .stores {
-  fill: black;
+  fill: grey;
+  stroke: white;
+  stroke-width: 1px;
+  opacity: .8;
 }
 
 
 .featuredStores {
   fill: rgb(20, 79, 122);
+  stroke: white;
+  stroke-width: 1px;
+  opacity: .8;
 }
 
 .tooltip {
