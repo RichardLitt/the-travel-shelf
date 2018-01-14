@@ -6,6 +6,7 @@ import storesMontreal from '../../assets/data/osm_montreal_stores.json'
 
 import * as d3 from 'd3-selection'
 import { geoPath, geoMercator } from 'd3-geo'
+import { zoom } from 'd3-zoom'
 
 class MapView extends Component {
 
@@ -14,12 +15,30 @@ class MapView extends Component {
     const svgWidth = 960
     const svgHeight = 600
 
+    const configureZoom = zoom()
+      .scaleExtent([1, 5])
+      .on('zoom', handleZoom)
+
     const svg = (
       d3.select(this.svg)
         .attr('width', svgWidth)
         .attr('height', svgHeight)
+        .call(configureZoom)
         .append('g')
     )
+
+    function handleZoom(){
+
+      g.attr('transform', d3.event.transform)
+
+      g
+        .selectAll('.featuredStores')
+        .attr('r', 8 / (d3.event.transform.k) + 'px')
+
+      g
+        .selectAll('.stores')
+        .attr('r', 8 / (d3.event.transform.k) + 'px')
+    }
 
     const g = svg.append('g')
 
@@ -51,7 +70,7 @@ class MapView extends Component {
       .classed('stores', true)
       .attr('cx', d => projection(d.geometry.coordinates)[0])
       .attr('cy', d => projection(d.geometry.coordinates)[1])
-      .attr('r', '5px')
+      .attr('r', '8px')
       .on('mousemove', handleMouseMoveStores)
       .on('mouseout', handleMouseOutStores)
 
