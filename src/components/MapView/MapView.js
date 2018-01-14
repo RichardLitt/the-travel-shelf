@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './MapView.css'
 
 import adminRegions from '../../assets/data/limadmin.json'
-import policeStations from '../../assets/data/pdq_point.json'
+import storesMontreal from '../../assets/data/osm_montreal_stores.json'
 
 import * as d3 from 'd3-selection'
 import { geoPath, geoMercator } from 'd3-geo'
@@ -44,46 +44,48 @@ class MapView extends Component {
       .classed('adminRegion', true)
 
     g
-      .selectAll('.stations')
-      .data(policeStations.features)
+      .selectAll('.stores')
+      .data(storesMontreal.features)
       .enter()
-      .append('path')
-      .attr('d', path)
-      .classed('stations', true)
-      .on('mousemove', handleMouseMoveStations)
-      .on('mouseout', handleMouseOutStations)
+      .append('circle')
+      .classed('stores', true)
+      .attr('cx', d => projection(d.geometry.coordinates)[0])
+      .attr('cy', d => projection(d.geometry.coordinates)[1])
+      .attr('r', '5px')
+      .on('mousemove', handleMouseMoveStores)
+      .on('mouseout', handleMouseOutStores)
 
     g
-      .selectAll('.bookstores')
+      .selectAll('.featuredStores')
       .data(this.props.stores)
       .enter()
       .append('circle')
-      .classed('bookstores', true)
+      .classed('featuredStores', true)
       .attr('cx', d => projection([d.coordinates.long, d.coordinates.lat])[0])
       .attr('cy', d => projection([d.coordinates.long, d.coordinates.lat])[1])
       .attr('r', '8px')
-      .on('mousemove', handleMouseMoveStores)
-      .on('mouseout', handleMouseOutStores)
+      .on('mousemove', handleMouseMoveFeaturedStores)
+      .on('mouseout', handleMouseOutFeaturedStores)
       .on('click', (d) => {
         tooltip
           .classed('active', false)
         this.props.clicked(d.name)
       })
 
-    function handleMouseMoveStations(d) {
+    function handleMouseMoveStores(d) {
       tooltip
         .classed('active', true)
         .style('left', (d3.event.pageX) - (tooltip.node().offsetWidth / 2) + 'px')
         .style('top', (d3.event.pageY) - (tooltip.node().offsetHeight + 10) + 'px')
-        .html(`<p>${d.properties.DESC_LIEU}</p>`)
+        .html(`<p>${d.properties.name}</p>`)
     }
 
-    function handleMouseOutStations() {
+    function handleMouseOutStores() {
       tooltip
         .classed('active', false)
     }
 
-    function handleMouseMoveStores(d) {
+    function handleMouseMoveFeaturedStores(d) {
       tooltip
         .classed('active', true)
         .style('left', (d3.event.pageX) - (tooltip.node().offsetWidth / 2) + 'px')
@@ -92,7 +94,7 @@ class MapView extends Component {
                  <p>${d.name}</p>`)
     }
 
-    function handleMouseOutStores() {
+    function handleMouseOutFeaturedStores() {
       tooltip
         .classed('active', false)
     }
