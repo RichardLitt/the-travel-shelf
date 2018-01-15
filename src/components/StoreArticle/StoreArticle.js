@@ -5,6 +5,9 @@ import './StoreArticle.scss'
 
 class storeArticle extends Component {
   render () {
+    let images = this.props.images.map(image => {
+      return <img src={image} style={{maxWidth: '30%', height: 'auto'}} className='img-thumbnail'/>
+    })
     return (
       <div>
         <section id='hero-bookstore' className='py-5 text-white' data-type='background' data-speed='2'>
@@ -20,12 +23,15 @@ class storeArticle extends Component {
         </section>
         <section id='blog-bookstore'>
           <div className='container'>
-            <div className='row' id='primary'>
+            <div className='row justify-content-center' id='primary'>
               <main id='content' className='col-md-8'>
-
                 <article className='post' style={{padding: '30px 20px', marginBottom: '40px'}}>
                   <Markdown>{this.props.review}</Markdown>
                 </article>
+                <div className='post' style={{padding: '30px 20px', marginBottom: '40px', textAlign: 'center'}}>
+                  <h4 className='connect'>Images</h4>
+                    {images}
+                </div>
               </main>
               <aside className='col-md-4'>
                 <div className='widget'>
