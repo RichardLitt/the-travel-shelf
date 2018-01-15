@@ -24,6 +24,11 @@ svg {
   stroke: white;
   stroke-width: 1px;
   opacity: .8;
+  vector-effect: non-scaling-stroke;
+}
+
+.stores.active {
+  fill: #ffc94e;
 }
 
 
@@ -32,6 +37,11 @@ svg {
   stroke: white;
   stroke-width: 1px;
   opacity: .8;
+  vector-effect: non-scaling-stroke;
+}
+
+.featuredStores.active {
+  fill: #28ff04;
 }
 
 .tooltip {
