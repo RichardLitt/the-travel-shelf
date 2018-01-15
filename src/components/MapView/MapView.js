@@ -12,6 +12,13 @@ class MapView extends Component {
 
   componentDidMount() {
 
+    //create a method used to bring the active svg to front
+    d3.selection.prototype.moveToFront = function() {
+      return this.each(function(){
+        this.parentNode.appendChild(this)
+      })
+    }
+
     const svgWidth = 960
     const svgHeight = 600
 
@@ -94,6 +101,7 @@ class MapView extends Component {
     function handleMouseMoveStores(d) {
       d3.select(this)
         .classed('active', true)
+        .moveToFront()
 
       tooltip
         .classed('active', true)
@@ -113,6 +121,7 @@ class MapView extends Component {
     function handleMouseMoveFeaturedStores(d) {
       d3.select(this)
         .classed('active', true)
+        .moveToFront()
 
       tooltip
         .classed('active', true)
