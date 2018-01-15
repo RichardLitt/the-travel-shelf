@@ -92,6 +92,9 @@ class MapView extends Component {
       })
 
     function handleMouseMoveStores(d) {
+      d3.select(this)
+        .classed('active', true)
+
       tooltip
         .classed('active', true)
         .style('left', (d3.event.pageX) - (tooltip.node().offsetWidth / 2) + 'px')
@@ -100,11 +103,17 @@ class MapView extends Component {
     }
 
     function handleMouseOutStores() {
+      d3.select(this)
+        .classed('active', false)
+
       tooltip
         .classed('active', false)
     }
 
     function handleMouseMoveFeaturedStores(d) {
+      d3.select(this)
+        .classed('active', true)
+
       tooltip
         .classed('active', true)
         .style('left', (d3.event.pageX) - (tooltip.node().offsetWidth / 2) + 'px')
@@ -114,6 +123,9 @@ class MapView extends Component {
     }
 
     function handleMouseOutFeaturedStores() {
+      d3.select(this)
+        .classed('active', false)
+
       tooltip
         .classed('active', false)
     }
