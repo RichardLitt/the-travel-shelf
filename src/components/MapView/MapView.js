@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { feature } from 'topojson'
 import './MapView.css'
 
 import adminRegions from '../../assets/data/limadmin.json'
 import storesMontreal from '../../assets/data/osm_montreal_stores.json'
+import worldAtlasData from 'world-atlas/world/110m.json'
 
 import * as d3 from 'd3-selection'
 import { geoPath, geoMercator } from 'd3-geo'
@@ -12,6 +14,11 @@ class MapView extends Component {
 
   componentDidMount() {
 
+    const countries = feature(worldAtlasData, {
+      type: "GeometryCollection",
+      geometries: worldAtlasData.objects.countries.geometries.filter(el => el.id !== '010')
+    })
+
     //create a method used to bring the active svg to front
     d3.selection.prototype.moveToFront = function() {
       return this.each(function(){
@@ -19,20 +26,21 @@ class MapView extends Component {
       })
     }
 
-    const svgWidth = 960
-    const svgHeight = 600
-
     const configureZoom = zoom()
       .scaleExtent([1, 5])
       .on('zoom', handleZoom)
+
+    const svgWidth = 960
+    const svgHeight = 600
 
     const svg = (
       d3.select(this.svg)
         .attr('width', svgWidth)
         .attr('height', svgHeight)
-        .call(configureZoom)
         .append('g')
     )
+
+    const g = svg.append('g')
 
     function handleZoom(){
 
@@ -47,8 +55,6 @@ class MapView extends Component {
         .attr('r', 8 / (d3.event.transform.k) + 'px')
     }
 
-    const g = svg.append('g')
-
     const tooltip = (
       d3.select('body')
         .append('div')
@@ -56,10 +62,20 @@ class MapView extends Component {
     )
 
     const projection = geoMercator()
-      .rotate([0, -30, 0]).fitSize([svgWidth, svgHeight], adminRegions)
+      .rotate([0, -30, 0]).fitSize([svgWidth, svgHeight], countries)
 
     const path = geoPath()
       .projection(projection)
+
+    g
+      .selectAll('.countries')
+      .data(countries.features)
+      .enter()
+      .append('path')
+      .classed('countries', true)
+      .classed('active', true)
+      .attr('d', path)
+      .on('click', (d) => console.log(d))
 
     g
       .selectAll('.adminRegion')

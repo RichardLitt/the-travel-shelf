@@ -54,7 +54,9 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "topojson": "^3.0.2",
+    "world-atlas": "^1.1.4"
   },
   "scripts": {
     "start": "npm run backend",
