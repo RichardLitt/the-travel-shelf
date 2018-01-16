@@ -14,6 +14,8 @@ class MapView extends Component {
 
   componentDidMount() {
 
+    const cities = [{name: 'Montreal', coordinates: [-73.5673, 45.5017]}]
+
     const countries = feature(worldAtlasData, {
       type: "GeometryCollection",
       geometries: worldAtlasData.objects.countries.geometries.filter(el => el.id !== '010')
@@ -25,6 +27,9 @@ class MapView extends Component {
         this.parentNode.appendChild(this)
       })
     }
+
+    //stores current zoom scale to set the size of icons at city level
+    let zoomScale
 
     const configureZoom = zoom()
       .scaleExtent([1, 5])
@@ -48,11 +53,11 @@ class MapView extends Component {
 
       g
         .selectAll('.featuredStores')
-        .attr('r', 8 / (d3.event.transform.k) + 'px')
+        .attr('r', 8 / (d3.event.transform.k * zoomScale) + 'px')
 
       g
         .selectAll('.stores')
-        .attr('r', 8 / (d3.event.transform.k) + 'px')
+        .attr('r', 8 / (d3.event.transform.k * zoomScale) + 'px')
     }
 
     const tooltip = (
@@ -62,7 +67,7 @@ class MapView extends Component {
     )
 
     const projection = geoMercator()
-      .rotate([0, -30, 0]).fitSize([svgWidth, svgHeight], countries)
+     .fitSize([svgWidth, svgHeight], countries)
 
     const path = geoPath()
       .projection(projection)
@@ -78,6 +83,20 @@ class MapView extends Component {
       .on('click', (d) => console.log(d))
 
     g
+      .selectAll('.cities')
+      .data(cities)
+      .enter()
+      .append('circle')
+      .classed('cities', true)
+      .classed('active', true)
+      .attr('cx', d => projection(d.coordinates)[0])
+      .attr('cy', d => projection(d.coordinates)[1])
+      .attr('r', '5px')
+      .on('mousemove', handleMouseMoveCities)
+      .on('mouseout', handleMouseOutCities)
+      .on('click', handleMouseClickCities)
+
+    g
       .selectAll('.adminRegion')
       .data(adminRegions.features)
       .enter()
@@ -85,34 +104,79 @@ class MapView extends Component {
       .attr('d', path)
       .classed('adminRegion', true)
 
-    g
-      .selectAll('.stores')
-      .data(storesMontreal.features)
-      .enter()
-      .append('circle')
-      .classed('stores', true)
-      .attr('cx', d => projection(d.geometry.coordinates)[0])
-      .attr('cy', d => projection(d.geometry.coordinates)[1])
-      .attr('r', '8px')
-      .on('mousemove', handleMouseMoveStores)
-      .on('mouseout', handleMouseOutStores)
+    function handleMouseMoveCities(d) {
+      tooltip
+        .classed('active', true)
+        .style('left', (d3.event.pageX) - (tooltip.node().offsetWidth / 2) + 'px')
+        .style('top', (d3.event.pageY) - (tooltip.node().offsetHeight + 10) + 'px')
+        .html(`<p>${d.name}</p>`)
+    }
 
-    g
-      .selectAll('.featuredStores')
-      .data(this.props.stores)
-      .enter()
-      .append('circle')
-      .classed('featuredStores', true)
-      .attr('cx', d => projection([d.coordinates.long, d.coordinates.lat])[0])
-      .attr('cy', d => projection([d.coordinates.long, d.coordinates.lat])[1])
-      .attr('r', '8px')
-      .on('mousemove', handleMouseMoveFeaturedStores)
-      .on('mouseout', handleMouseOutFeaturedStores)
-      .on('click', (d) => {
-        tooltip
-          .classed('active', false)
-        this.props.clicked(d.name)
-      })
+    function handleMouseOutCities() {
+      tooltip
+        .classed('active', false)
+    }
+
+    function handleMouseClickCities(d) {
+      svg.call(configureZoom)
+
+      d3.selectAll('.cities')
+        .classed('active', false)
+
+      tooltip
+        .classed('active', false)
+
+      zoomToCityAndAddLocalDataToMap(d.name)
+
+    }
+
+    const zoomToCityAndAddLocalDataToMap = city => {
+      let bounds = path.bounds(adminRegions),
+        dx = bounds[1][0] - bounds[0][0],
+        dy = bounds[1][1] - bounds[0][1],
+        x = (bounds[0][0] + bounds[1][0]) / 2,
+        y = (bounds[0][1] + bounds[1][1]) / 2,
+        scale = .9 / Math.max(dx / svgWidth, dy / svgHeight),
+        translate = [svgWidth / 2 - scale * x, svgHeight / 2 - scale * y];
+
+      zoomScale = scale
+
+      svg.transition()
+        .duration(2000)
+        .style("stroke-width", 1.5 / scale + "px")
+        .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+
+        g
+          .selectAll('.stores')
+          .data(storesMontreal.features)
+          .enter()
+          .append('circle')
+          .classed('stores', true)
+          .classed('montreal', true)
+          .attr('cx', d => projection(d.geometry.coordinates)[0])
+          .attr('cy', d => projection(d.geometry.coordinates)[1])
+          .attr('r', 8 / scale + 'px')
+          .on('mousemove', handleMouseMoveStores)
+          .on('mouseout', handleMouseOutStores)
+
+        g
+          .selectAll('.featuredStores')
+          .data(this.props.stores)
+          .enter()
+          .append('circle')
+          .classed('featuredStores', true)
+          .classed('montreal', true)
+          .attr('cx', d => projection([d.coordinates.long, d.coordinates.lat])[0])
+          .attr('cy', d => projection([d.coordinates.long, d.coordinates.lat])[1])
+          .attr('r', 8 / scale + 'px')
+          .on('mousemove', handleMouseMoveFeaturedStores)
+          .on('mouseout', handleMouseOutFeaturedStores)
+          .on('click', (d) => {
+            tooltip
+              .classed('active', false)
+            this.props.clicked(d.name)
+          })
+    }
 
     function handleMouseMoveStores(d) {
       d3.select(this)

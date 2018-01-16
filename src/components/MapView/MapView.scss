@@ -13,10 +13,34 @@ svg {
   border: 1px solid rgb(20, 79, 122);
 }
 
+.countries {
+  fill: none;
+  stroke: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.countries.active {
+  fill: white;
+  stroke: black;
+}
+
+.cities {
+  fill: none;
+  stroke: none;
+  pointer-events: none;
+}
+
+.cities.active {
+  fill: blue;
+  stroke:white;
+  pointer-events: all;
+}
+
 .adminRegion {
   stroke: black;
   stroke-width: 1px;
   fill:white;
+  vector-effect: non-scaling-stroke;
 }
 
 .stores {
