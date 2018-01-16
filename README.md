@@ -25,6 +25,10 @@ To run Sass, use `npm run watch-css`.
 
 `npm run test`
 
+## Live Site
+
+This is hosted on Heroku, at https://the-travel-shelf.herokuapp.com/. Contact Richard if you need access or want to change something. The URL is forwarded to thetravelshelf.com, and automatically builds on `master`. 
+
 ## Contribute
 
 Please contribute if you'd like. This is an open project. [Open an issue!](https://github.com/RichardLitt/the-travel-shelf/issues/new)
