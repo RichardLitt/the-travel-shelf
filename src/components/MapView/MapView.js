@@ -8,7 +8,7 @@ import worldAtlasData from 'world-atlas/world/110m.json'
 
 import * as d3 from 'd3-selection'
 import { geoPath, geoMercator } from 'd3-geo'
-import { zoom } from 'd3-zoom'
+import { zoom, zoomIdentity } from 'd3-zoom'
 
 class MapView extends Component {
 
@@ -30,6 +30,32 @@ class MapView extends Component {
 
     //stores current zoom scale to set the size of icons at city level
     let zoomScale
+
+    const worldMapView = d3.select('#worldMap')
+
+    worldMapView.on('click', worldMapViewHandler)
+
+    function worldMapViewHandler() {
+
+      svg.on('.zoom', null)
+
+
+      svg.call(configureZoom.transform, zoomIdentity)
+
+      svg.transition()
+        .duration(2000)
+        .style("stroke-width", 1.5 / 1 + "px")
+        .attr("transform", "translate(" + 0 + ")scale(" + 1 + ")");
+
+      setTimeout(()=> {
+        d3.selectAll('.cities')
+          .classed('active', true)
+        d3.selectAll('.local')
+          .remove()
+      },2000)
+    }
+
+
 
     const configureZoom = zoom()
       .scaleExtent([1, 5])
@@ -96,14 +122,6 @@ class MapView extends Component {
       .on('mouseout', handleMouseOutCities)
       .on('click', handleMouseClickCities)
 
-    g
-      .selectAll('.adminRegion')
-      .data(adminRegions.features)
-      .enter()
-      .append('path')
-      .attr('d', path)
-      .classed('adminRegion', true)
-
     function handleMouseMoveCities(d) {
       tooltip
         .classed('active', true)
@@ -146,18 +164,27 @@ class MapView extends Component {
         .style("stroke-width", 1.5 / scale + "px")
         .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
 
-        g
-          .selectAll('.stores')
-          .data(storesMontreal.features)
-          .enter()
-          .append('circle')
-          .classed('stores', true)
-          .classed('montreal', true)
-          .attr('cx', d => projection(d.geometry.coordinates)[0])
-          .attr('cy', d => projection(d.geometry.coordinates)[1])
-          .attr('r', 8 / scale + 'px')
-          .on('mousemove', handleMouseMoveStores)
-          .on('mouseout', handleMouseOutStores)
+      g
+        .selectAll('.adminRegion')
+        .data(adminRegions.features)
+        .enter()
+        .append('path')
+        .attr('d', path)
+        .classed('adminRegion', true)
+        .classed('local', true)
+
+      g
+        .selectAll('.stores')
+        .data(storesMontreal.features)
+        .enter()
+        .append('circle')
+        .classed('stores', true)
+        .classed('local', true)
+        .attr('cx', d => projection(d.geometry.coordinates)[0])
+        .attr('cy', d => projection(d.geometry.coordinates)[1])
+        .attr('r', 8 / scale + 'px')
+        .on('mousemove', handleMouseMoveStores)
+        .on('mouseout', handleMouseOutStores)
 
         g
           .selectAll('.featuredStores')
@@ -165,7 +192,7 @@ class MapView extends Component {
           .enter()
           .append('circle')
           .classed('featuredStores', true)
-          .classed('montreal', true)
+          .classed('local', true)
           .attr('cx', d => projection([d.coordinates.long, d.coordinates.lat])[0])
           .attr('cy', d => projection([d.coordinates.long, d.coordinates.lat])[1])
           .attr('r', 8 / scale + 'px')
@@ -231,6 +258,7 @@ class MapView extends Component {
           <div className='col-12 text-center'>
             <h1>Montreal</h1>
           </div>
+          <button id='worldMap' class='btn btn-success'>World Map</button>
           <div className='col-12 text-center'>
             <svg ref={(elem) => { this.svg = elem }} />
             <div className='tooltip' ref={(elem) => { this.div = elem }} />
