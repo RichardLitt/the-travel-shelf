@@ -22,6 +22,7 @@
 
 #### Toronto
 - The Weekend Variety
+- [Monkey's Paw](http://www.monkeyspaw.com/about/)
 
 #### Montréal
 - The Word
@@ -63,3 +64,11 @@
 #### Massachusetts
 - Porter Square Books
 - Collier Poetry
+
+#### New Jersey
+- [Watchung](http://www.watchungbooksellers.com/)
+
+#### New York
+- The Strand
+- Mellow Pages
+- [Book Culture](http://www.bookculture.com/)
