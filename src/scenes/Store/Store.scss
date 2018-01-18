@@ -28,9 +28,11 @@
 #blog-bookstore {
   padding: 50px 0 0; }
 #blog-bookstore .post {
+  p {
+    font-size: 22px;
+  }
   position: relative;
-  border: solid 1px #ddd;
-  margin: 40px 0 0;
+  margin: 5px 0 0;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px; }
