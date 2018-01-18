@@ -3,12 +3,10 @@ import { connect } from 'react-redux'
 import StoreCard from '../../components/StoreCard/StoreCard'
 import Footer from '../../components/Footer/Footer'
 import './StoreIndex.css'
-import * as actionCreators from '../../store/actions/index'
 
 class StoreIndex extends Component {
 
   storeSelectHandler = (name) => {
-    this.props.onStoreSelect(name)
     this.props.history.push({pathname: this.props.match.url + '/' + name})
   }
 
@@ -56,10 +54,4 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onStoreSelect: (name) => dispatch(actionCreators.selectStore(name))
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps) (StoreIndex)
+export default connect(mapStateToProps) (StoreIndex)

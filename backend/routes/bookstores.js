@@ -8,6 +8,12 @@ router.get('/', function (req, res, next) {
     .catch(err => console.log(err))
 })
 
+router.get('/:name', function (req, res, next) {
+  db.Bookstore.findOne({name: req.params.name})
+    .then(store => res.json(store))
+    .catch(err => console.log(err))
+})
+
 router.post('/', function (req, res, next) {
   let newStore = new db.Bookstore({...req.body})
   res.sendStatus(200)
