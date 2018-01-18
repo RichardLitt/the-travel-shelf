@@ -12,12 +12,10 @@ const reducer = (state = initialState, action) => {
         ...state,
         stores: action.stores
       }
-    case actionTypes.SELECT_STORE:
-      const selectedStoreName = action.name
-      const selectedStore = state.stores.filter(el => el.name === selectedStoreName)[0]
+    case actionTypes.SET_SELECTED_STORE:
       return {
         ...state,
-        selectedStore: selectedStore
+        selectedStore: action.store
       }
     default: {
       return state

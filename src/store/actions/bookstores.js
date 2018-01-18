@@ -7,10 +7,25 @@ export const setStores = (stores) => {
   }
 }
 
-export const selectStore = (name) => {
+export const setSelectedStore = (store) => {
   return {
-    type: actionTypes.SELECT_STORE,
-    name: name
+    type: actionTypes.SET_SELECTED_STORE,
+    store: store
+  }
+}
+
+export const selectStore = (name) => {
+  return dispatch => {
+    fetch('/api/bookstores/' + name)
+      .then(res => {
+        if (!res.ok) {
+          throw Error(res.status)
+        } else {
+          return res.json()
+        }
+      })
+      .then(store => dispatch(setSelectedStore(store)))
+      .catch(error => console.log('Error Fetching Stores', error))
   }
 }
 
