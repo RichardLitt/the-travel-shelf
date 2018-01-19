@@ -30,7 +30,13 @@ class Map extends Component {
             </div>
           </div>
         </section>
-        {mapView}
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col text-center my-5' >
+              {mapView}
+            </div>
+          </div>
+        </div>
         <Footer />
       </div>
     )
