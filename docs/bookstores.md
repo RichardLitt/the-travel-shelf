@@ -29,6 +29,10 @@
 - Drawn and Quarterly
 - Westcott Books
 
+#### Quebec
+
+- https://m.facebook.com/librairiesaintjeanbaptiste. (From a friend: Probably my favorite. I have a crush on the kindly Quebec man who runs it. A gathering place for the locals who sit for hours at the tiny cafe bar upstairs and they jabber away in French for hours with my crush. Small cozy reading/working nook next to the bay window where you can watch the world go by below. Great internet. Mostly books in French but they have a small English selection of some good classics. Bought some Joyce and Mark Twain here.)
+
 ### Germany
 
 #### Berlin
@@ -72,3 +76,14 @@
 - The Strand
 - Mellow Pages
 - [Book Culture](http://www.bookculture.com/)
+
+#### California
+
+- In San Diego: http://www.adamsavebooks.com/. Review: helps make the big city feel like a small town, nice people working there, and they have cats!
+
+- In Julian, CA: https://m.facebook.com/pages/The-Julian-Book-House/700156596779369. Review: Really lovely gentleman running it, bought a couple old books here, they have cats too.
+
+#### DC
+
+-In Washington, DC: http://kramers.com/. Review: More modern, lots of people in and out, not as home towny kind of feel, but can spend a lot of time here, great selection, and I've had more than a few hungover brunches here. Excellent food.
+
