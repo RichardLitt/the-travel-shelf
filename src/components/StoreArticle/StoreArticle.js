@@ -6,7 +6,7 @@ import './StoreArticle.scss'
 class storeArticle extends Component {
   render () {
     let images = this.props.images.map(image => {
-      return <img src={image} style={{maxWidth: '30%', height: 'auto'}} className='img-thumbnail'/>
+      return <img src={process.env.PUBLIC_URL + image} style={{maxWidth: '30%', height: 'auto'}} className='img-thumbnail'/>
     })
     return (
       <div>
