@@ -3,10 +3,9 @@ const mongoose = require('mongoose')
 const BookstoreSchema = new mongoose.Schema({
   dateAdded: { type: Date, default: Date.now },
   name: String,
+  abbreviation: String,
   summary: String,
   review: String,
-  thumbnail: String,
-  images: [String],
   url: String,
   telephone: String,
   amenities: {
