@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Map, TileLayer, Marker, Popup, GeoJSON} from 'react-leaflet'
+import * as imageData from '../../utilities/imageLoader'
 
 class MapView extends Component {
   state = {
@@ -18,7 +19,7 @@ class MapView extends Component {
             <Popup>
               <div className='text-center' style={{width: '150px'}}>
                 <p className='align-center my-0' style={{fontSize:'18px'}}>{store.name}</p>
-                <img src={store.thumbnail} className='img-fluid'/>
+                <img src={imageData[store.abbreviation][0]} className='img-fluid'/>
               <button className='btn btn-outline-primary btn-sm mt-3' onClick={ () => {this.props.clicked(store.name)}}>View</button>
               </div>
             </Popup>
