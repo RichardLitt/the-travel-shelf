@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Markdown from 'react-remarkable'
 import Form from '../EmailForm/EmailForm'
+import * as imageData from '../../utilities/imageLoader'
 import './StoreArticle.scss'
 
 class storeArticle extends Component {
   render () {
-    let images = this.props.images.map(image => {
+    let images = imageData[this.props.abbreviation].map(image => {
       return <img src={image} style={{maxWidth: '30%', height: 'auto'}} className='img-thumbnail'/>
     })
     return (
