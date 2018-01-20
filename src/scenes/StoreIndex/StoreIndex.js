@@ -26,21 +26,23 @@ class StoreIndex extends Component {
     return (
       <div>
         <section id='index-bookstore' className='py-5 text-white' data-type='background' data-speed='2'>
-        <div className='primary-overlay'>
-          <div className='container'>
-            <div className='row justify-content-center'>
-              <div className='col text-center'>
-                <h1 className='display-4 myhero text-center'>Stores</h1>
+          <div className='primary-overlay'>
+            <div className='container'>
+              <div className='row justify-content-center'>
+                <div className='col text-center'>
+                  <h1 className='display-4 myhero text-center'>Stores</h1>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section style={{padding: '100px'}}>
-        <div className='row justify-content-center'>
-            {stores}
-          </div>
+        <section style={{padding: '100px'}}>
+          <div className='row justify-content-center'>
+            <div className='col d-flex flex-wrap justify-content-around'>
+              {stores}
+            </div>
+            </div>
         </section>
         <Footer />
       </div>
