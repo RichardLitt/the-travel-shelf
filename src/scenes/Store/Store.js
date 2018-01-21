@@ -32,7 +32,7 @@ class Store extends Component {
 
 const mapStateToProps = state => {
   return {
-    store: state.selectedStore
+    store: state.bookstores.selectedStore
   }
 }
 

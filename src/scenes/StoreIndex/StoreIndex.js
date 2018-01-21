@@ -53,7 +53,7 @@ class StoreIndex extends Component {
 
 const mapStateToProps = state => {
   return {
-    stores: state.stores
+    stores: state.bookstores.stores
   }
 }
 

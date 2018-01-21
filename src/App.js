@@ -6,6 +6,7 @@ import Store from './scenes/Store/Store'
 import Navbar from './components/Navbar/Navbar'
 import ContactPage from './scenes/ContactPage/ContactPage'
 import About from './scenes/About/About'
+import Admin from './scenes/Admin/Admin'
 
 import * as actionCreators from './store/actions/index'
 
@@ -33,6 +34,7 @@ class App extends Component {
           <Route path='/stores' exact component={StoreIndex} />
           <Route path='/stores/:name' component={Store} />
           <Route path='/map' component={Map} />
+          <Route path='/admin' component={Admin} />
         </div>
       </Router>
     )

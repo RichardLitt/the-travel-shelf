@@ -30,6 +30,9 @@ const navbar = () => {
             <li className='nav-item'>
               <NavLink to='/contact' exact className='nav-link'>Contact</NavLink>
             </li>
+            <li className='nav-item'>
+              <NavLink to='/admin' exact className='nav-link'>Admin</NavLink>
+            </li>
           </ul>
         </div>
       </div>
