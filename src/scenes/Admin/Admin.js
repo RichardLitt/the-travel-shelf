@@ -2,16 +2,53 @@ import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import Dropzone from 'react-dropzone'
+import axios from 'axios'
 import Footer from '../../components/Footer/Footer'
 import './Admin.css'
 import * as actionCreators from '../../store/actions/index'
 
+
+const renderDropzoneInput = (field) => {
+  const files = field.input.value;
+  return (
+    <div>
+      <Dropzone
+        name={field.name}
+        onDrop={( filesToUpload, e ) => field.input.onChange(filesToUpload)}
+      >
+        <div>Try dropping some files here, or click to select files to upload.</div>
+      </Dropzone>
+      {field.meta.touched &&
+      field.meta.error &&
+      <span className="error">{field.meta.error}</span>}
+      {files && Array.isArray(files) && (
+        <ul>
+          { files.map((file, i) => <li key={i}>{file.name}</li>) }
+        </ul>
+      )}
+    </div>
+  );
+}
+
 class Admin extends Component {
 
+  onDrop(acceptedFiles, rejectedFiles) {
+    console.log('accepted', acceptedFiles)
+    for(let file of acceptedFiles){
+      let params = {
+        filename: file.name,
+        filetype: file.type
+      }
+      axios.get('/api/bookstores/s3', {params})
+        .then(res => axios.put(res.data, file))
+        .then(results => console.log(results))
+        .catch(error => console.log('Error uploading images to AWS', error))
+    }
+  }
+
+
   renderCheckBox(field){
-
-
-
     return (
         <div className="form-check">
           <input type="checkbox" name={field.name} id={field.id} {...field.input} />
@@ -68,8 +105,20 @@ class Admin extends Component {
   render () {
     return (
       <div>
+        <Dropzone accept="image/jpeg, image/png" onDrop={ this.onDrop } size={ 150 }>
+          <div>
+            Drop some files here!
+          </div>
+        </Dropzone>
         <div className='container'>
             <form onSubmit={this.props.handleSubmit(this.onSubmit.bind(this))}>
+
+
+              <Field
+                name={FILE_FIELD_NAME}
+                component={renderDropzoneInput}
+              />
+              </div>
               <Field
                 label="Bookstore Name"
                 name="name"
