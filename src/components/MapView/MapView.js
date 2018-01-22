@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Map, TileLayer, Marker, Popup, GeoJSON} from 'react-leaflet'
+import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import * as imageData from '../../utilities/imageLoader'
 
 class MapView extends Component {
