@@ -43,3 +43,18 @@ export const fetchStores = () => {
       .catch(error => console.log('Error Fetching Stores', error))
   }
 }
+
+export const postStore = (store, callback) => {
+  return dispatch => {
+    fetch('/api/bookstores', {
+      method: 'POST',
+      body: JSON.stringify(store),
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    })
+      .then(() => dispatch(fetchStores()))
+      .then(() => callback)
+      .catch(error => console.log('Error Posting Store', error))
+  }
+}

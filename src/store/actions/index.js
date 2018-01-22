@@ -1,4 +1,5 @@
 export {
   fetchStores,
-  selectStore
+  selectStore,
+  postStore
 } from './bookstores'

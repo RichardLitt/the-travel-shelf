@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import Footer from '../../components/Footer/Footer'
 import './Admin.css'
+import * as actionCreators from '../../store/actions/index'
 
 class Admin extends Component {
 
@@ -57,6 +59,9 @@ class Admin extends Component {
 
   onSubmit = values => {
     console.log(values)
+    this.props.postStore(values,  () => {
+      this.props.history.push("/")
+    })
   }
 
 
@@ -104,92 +109,92 @@ class Admin extends Component {
               />
               <Field
                 id='coffee'
-                name="coffee"
+                name="amenities.coffee"
                 component={this.renderCheckBox}
               />
               <Field
                 id="wifi"
-                name="Wifi"
+                name="amenities.wifi"
                 component={this.renderCheckBox}
               />
               <Field
                 id="plugs"
-                name="plugs"
+                name="amenities.plugs"
                 type='checkbox'
                 component={this.renderCheckBox}
               />
               <Field
                 id='events'
-                name="events"
+                name="amenities.events"
                 type="checkbox"
                 component={this.renderCheckBox}
               />
               <Field
                 label="Twitter Account"
-                name="twitter"
+                name="social.twitter"
                 type='text'
                 component={this.renderTextField}
                 help='The stores twitter account'
               />
               <Field
                 label="Facebook Account"
-                name="facebook"
+                name="social.facebook"
                 type='text'
                 component={this.renderTextField}
                 help='The stores facebook account'
               />
               <Field
                 label="Instagram Account"
-                name="instagram"
+                name="social.instagram"
                 type='text'
                 component={this.renderTextField}
                 help='The stores instagram account'
               />
               <Field
                 label="Country"
-                name="addressCountry"
+                name="postalAddress.addressCountry"
                 type='text'
                 component={this.renderTextField}
                 help='The country the store is located in'
               />
               <Field
                 label="Region"
-                name="addressRegion"
+                name="postalAddress.addressRegion"
                 type='text'
                 component={this.renderTextField}
                 help='The region the store is located in. This could represent a State or a Province...'
               />
               <Field
                 label="Locality"
-                name="addressLocality"
+                name="postalAddress.addressLocality"
                 type='text'
                 component={this.renderTextField}
                 help='The locality the store is located in. This would typically represent a city.'
               />
               <Field
                 label="Postal Code"
-                name="postalCode"
+                name="postalAddress.postalCode"
                 type='text'
                 component={this.renderTextField}
                 help='The the stores postal code.'
               />
               <Field
                 label="Street Address"
-                name="streetAddress"
+                name="postalAddress.streetAddress"
                 type='text'
                 component={this.renderTextField}
                 help='The stores street address.'
               />
               <Field
-                label="Longitute"
-                name="long"
+                label="Longitude"
+                name="coordinates.long"
                 type='text'
                 component={this.renderTextField}
                 help='A number representing the east(+) or west(-) angle'
               />
               <Field
-                label="Longitute"
-                name="lat"
+                label="Lagitude"
+                name="coordinates.lat"
                 type='text'
                 component={this.renderTextField}
                 help='A number representing the north(+) or south(-) angle'
@@ -224,4 +229,10 @@ function validate(values) {
   // If errors has *any* properties, redux form assumes form is invalid
   return errors;
 }
-export default reduxForm({validate, form: 'submitStoreForm' })(Admin)
+
+const mapDispatchToProps = dispatch => {
+  return{
+    postStore: (values, callback) => dispatch(actionCreators.postStore(values, callback))
+  }
+}
+export default reduxForm({validate, form: 'submitStoreForm' })(connect(null, mapDispatchToProps)(Admin))
