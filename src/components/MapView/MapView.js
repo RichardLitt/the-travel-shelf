@@ -19,7 +19,7 @@ class MapView extends Component {
             <Popup>
               <div className='text-center' style={{width: '150px'}}>
                 <p className='align-center my-0' style={{fontSize:'18px'}}>{store.name}</p>
-                <img src={imageData[store.abbreviation][0]} className='img-fluid'/>
+                <img src={imageData[store.abbreviation][0]} className='img-fluid' alt='storefront'/>
               <button className='btn btn-outline-primary btn-sm mt-3' onClick={ () => {this.props.clicked(store.name)}}>View</button>
               </div>
             </Popup>
