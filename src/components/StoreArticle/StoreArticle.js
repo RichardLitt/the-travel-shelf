@@ -7,7 +7,7 @@ import './StoreArticle.scss'
 class storeArticle extends Component {
   render () {
     let images = imageData[this.props.abbreviation].map(image => {
-      return <img src={image} style={{maxWidth: '30%', height: 'auto'}} className='img-thumbnail'/>
+      return <img key={image} src={image} style={{maxWidth: '30%', height: 'auto'}} className='img-thumbnail'/>
     })
     return (
       <div>
