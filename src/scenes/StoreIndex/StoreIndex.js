@@ -16,6 +16,7 @@ class StoreIndex extends Component {
     if(this.props.stores){
       stores =  this.props.stores.map(store => (
             <StoreCard
+              key={store.name}
               {...store}
               clicked={() => this.storeSelectHandler(store.name)}
             />
