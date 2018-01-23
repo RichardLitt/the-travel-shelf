@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './HomePage.css'
+import { Link } from 'react-router-dom'
 import Hero from '../../components/Hero/Hero'
 import Form from '../../components/EmailForm/EmailForm'
 import Footer from '../../components/Footer/Footer'
@@ -17,7 +18,7 @@ class Homepage extends Component {
                 <div className='container leaf'>
                   <h2 className='mb-4'>Welcome To The Travel Shelf</h2>
                   <hr align='center' width='30%' />
-                  <p>Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence <span><a href='bookstores.html'>read more...</a></span></p>
+                  <p>Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence <span><Link to='/stores'>read more...</Link></span></p>
                 </div>
               </div>
             </div>
@@ -31,7 +32,7 @@ class Homepage extends Component {
             <div className='row no-gutters d-flex flex-wrap justify-content-center align-items-baseline'>
 
               <div className='portfolio-item m-2 ' style={{flexBasis: '50%', minWidth: '300px'}}>
-                <a className='portfolio-link' href='stores/Drawn%20and%20Quarterly'>
+                <Link className='portfolio-link' to='stores/Drawn%20and%20Quarterly'>
                   <div className='caption'>
                     <div className='caption-content'>
                       <h3>Drawn and Quaterly</h3>
@@ -39,11 +40,11 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <img src={imageData.dq[4]} className='img-fluid' alt='Book store' />
-                </a>
+                </Link>
               </div>
 
               <div className='portfolio-item m-2' style={{flexBasis: '40%', minWidth: '300px'}} >
-                <a className='portfolio-link' href='stores/The%20Word'>
+                <Link className='portfolio-link' to='stores/The%20Word'>
                   <div className='caption'>
                     <div className='caption-content'>
                       <h3>The Word</h3>
@@ -51,11 +52,11 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <img src={imageData.word[0]} className='img-fluid' alt='Book store' />
-                </a>
+                </Link>
               </div>
 
               <div className='portfolio-item m-2' style={{flexBasis: '50%', minWidth: '300px'}}>
-                <a className='portfolio-link' href='stores/Librairie%20Le%20port%20de%20t%C3%AAte'>
+                <Link className='portfolio-link' to='stores/Librairie%20Le%20port%20de%20t%C3%AAte'>
                   <div className='caption'>
                     <div className='caption-content'>
                       <h3>Le port de tête</h3>
@@ -63,7 +64,7 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <img src={imageData.pt[2]} className='img-fluid' alt='Book store' />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
