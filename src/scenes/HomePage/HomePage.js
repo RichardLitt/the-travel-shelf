@@ -3,6 +3,7 @@ import './HomePage.css'
 import Hero from '../../components/Hero/Hero'
 import Form from '../../components/EmailForm/EmailForm'
 import Footer from '../../components/Footer/Footer'
+import * as imageData from '../../utilities/imageLoader'
 
 class Homepage extends Component {
   render () {
@@ -27,79 +28,43 @@ class Homepage extends Component {
             <h2 className='text-center'>Portfolio</h2>
             <hr align='center' width='30%' />
             <p className='text-center header'>Visit Your Local Independent Bookstores Today!</p>
-            <div className='row no-gutters container-grid'>
+            <div className='row no-gutters d-flex flex-wrap justify-content-center align-items-baseline'>
 
-              <div className='col-md-4 portfolio-item'>
-                <a className='portfolio-link' href='https://www.drawnandquarterly.com/'>
+              <div className='portfolio-item m-2 ' style={{flexBasis: '50%', minWidth: '300px'}}>
+                <a className='portfolio-link' href='stores/Drawn%20and%20Quarterly'>
                   <div className='caption'>
                     <div className='caption-content'>
                       <h3>Drawn and Quaterly</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
-                  <img src='img/book6.jpg' className='img-fluid' alt='Book store' />
+                  <img src={imageData.dq[4]} className='img-fluid' alt='Book store' />
                 </a>
               </div>
 
-              <div className='col-md-8 portfolio-item'>
-                <a className='portfolio-link' href='http://bookmanager.ca/argobks/'>
-                  <div className='caption'>
-                    <div className='caption-content'>
-                      <h3>Argo Bookshop</h3>
-                      <i className='fa fa-search-plus fa-2x' />
-                    </div>
-                  </div>
-                  <img src='img/book1.jpg' className='img-fluid' alt='Book store' />
-                </a>
-              </div>
-
-              <div className='col-md-8 portfolio-item'>
-                <a className='portfolio-link' href='http://www.bibliophilemontreal.com/'>
-                  <div className='caption'>
-                    <div className='caption-content'>
-                      <h3>Bibliophile</h3>
-                      <i className='fa fa-search-plus fa-2x' />
-                    </div>
-                  </div>
-                  <img src='/img/book2.jpg' className='img-fluid' alt='Book store' />
-                </a>
-              </div>
-
-              <div className='col-md-4 portfolio-item'>
-                <a className='portfolio-link' href='http://www.encorebooks.ca/'>
-                  <div className='caption'>
-                    <div className='caption-content'>
-                      <h3>Encore</h3>
-                      <i className='fa fa-search-plus fa-2x' />
-                    </div>
-                  </div>
-                  <img src='img/book3.jpg' className='img-fluid' alt='Book store' />
-                </a>
-              </div>
-
-              <div className='col-md-4 portfolio-item'>
-                <a className='portfolio-link' href='http://wordbookstore.ca/'>
+              <div className='portfolio-item m-2' style={{flexBasis: '40%', minWidth: '300px'}} >
+                <a className='portfolio-link' href='stores/The%20Word'>
                   <div className='caption'>
                     <div className='caption-content'>
                       <h3>The Word</h3>
                       <i className='fa fa-search-plus fa-2x' />
                     </div>
                   </div>
-                  <img src='img/book12.jpg' className='img-fluid' alt='Book store' />
-                </a>
-              </div>
-              <div className='col-md-8 portfolio-item'>
-                <a className='portfolio-link' href='https://lalibrairiedeverdun.com/'>
-                  <div className='caption'>
-                    <div className='caption-content'>
-                      <h3>Librairie De Verdun</h3>
-                      <i className='fa fa-search-plus fa-2x' />
-                    </div>
-                  </div>
-                  <img src='img/book4.jpg' className='img-fluid' alt='Book store' />
+                  <img src={imageData.word[0]} className='img-fluid' alt='Book store' />
                 </a>
               </div>
 
+              <div className='portfolio-item m-2' style={{flexBasis: '50%', minWidth: '300px'}}>
+                <a className='portfolio-link' href='stores/Librairie%20Le%20port%20de%20t%C3%AAte'>
+                  <div className='caption'>
+                    <div className='caption-content'>
+                      <h3>Le port de tête</h3>
+                      <i className='fa fa-search-plus fa-2x' />
+                    </div>
+                  </div>
+                  <img src={imageData.pt[2]} className='img-fluid' alt='Book store' />
+                </a>
+              </div>
             </div>
           </div>
         </section>
