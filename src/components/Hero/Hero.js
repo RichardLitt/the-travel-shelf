@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const hero = () => {
   return (
@@ -9,8 +9,8 @@ const hero = () => {
           <div className='row justify-content-center'>
             <div className='col text-center'>
               <h1 className='display-4 myhero text-center'>A magazine of beautiful independent bookstores around the world</h1>
-              <NavLink to='/Contact' className='btn btn-outline-warning btn-lg read'><i
-                className='fa fa-arrow-right' /> Read More</NavLink>
+              <Link to='/about' className='btn btn-outline-warning btn-lg read'><i
+                className='fa fa-arrow-right' /> Read More</Link>
             </div>
           </div>
         </div>
