@@ -11,24 +11,11 @@ class Homepage extends Component {
     return (
       <div>
         <Hero />
-        <section id='home-heading'>
-          <div className='dark-overlay'>
-            <div className='row'>
-              <div className='col'>
-                <div className='container leaf'>
-                  <h2 className='mb-4'>Welcome To The Travel Shelf</h2>
-                  <hr align='center' width='30%' />
-                  <p>Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence <span><Link to='/stores'>read more...</Link></span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <section id='portfolio'>
           <div className='container-fluid'>
-            <h2 className='text-center'>Portfolio</h2>
+            <h2 className='text-center'>Welcome To The Travel Shelf</h2>
             <hr align='center' width='30%' />
-            <p className='text-center header'>Visit Your Local Independent Bookstores Today!</p>
+            <p className='text-center header'>Browse Our Portfolio And Visit Your Local Independent Bookstores Today!</p>
             <div className='row no-gutters d-flex flex-wrap justify-content-center align-items-baseline'>
 
               <div className='portfolio-item m-2 ' style={{flexBasis: '50%', minWidth: '300px'}}>
