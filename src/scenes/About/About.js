@@ -65,13 +65,13 @@ class About extends Component {
                   <img src='img/vernon.jpg' className='img-fluid rounded-circle avatar' alt='Vernon' />
                   <h4>Vernon Lillies</h4>
                   <p className='text-muted'>Full Stack <br />Web Developer</p>
-                  <p className='bio'>Full stack developer with a passion for applying technology to solve real world problems. Flying robots, renewable energy, construction…</p>
+                  <p className='bio'>Full stack developer with a love for flying robots, Cleantech, and weekly food specials. Always learning new skills and giving 100% to get the job done.</p>
                   <p className='icons'>
                     <a href='https://github.com/VernL' className='social'><i className='fa fa-github fa-2x' aria-hidden='true' />
                       </a>
-                    <a href='https://twitter.com/' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
+                    <a href='https://twitter.com/Vernon_Lillies' className='social'><i className='fa fa-twitter-square fa-2x' aria-hidden='true' />
                       </a>
-                    <a href='https://www.linkedin.com/in/vernon-lillies-ing-a3172270/' className='social'><i className='fa fa-linkedin-square fa-2x' aria-hidden='true' />
+                    <a href='https://www.linkedin.com/in/vernon-lillies-a3172270/' className='social'><i className='fa fa-linkedin-square fa-2x' aria-hidden='true' />
                       </a>
                   </p>
                 </div>
