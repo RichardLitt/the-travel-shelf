@@ -29,7 +29,6 @@ class App extends Component {
           <Navbar />
           <Route exact path='/' component={HomePage} />
           <Route path='/about' component={About} />
-          <Route path='/contact' component={ContactPage} />
           <Route path='/stores' exact component={StoreIndex} />
           <Route path='/stores/:name' component={Store} />
           <Route path='/map' component={Map} />
