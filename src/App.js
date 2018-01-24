@@ -4,7 +4,6 @@ import HomePage from './scenes/HomePage/HomePage'
 import StoreIndex from './scenes/StoreIndex/StoreIndex'
 import Store from './scenes/Store/Store'
 import Navbar from './components/Navbar/Navbar'
-import ContactPage from './scenes/ContactPage/ContactPage'
 import About from './scenes/About/About'
 
 import * as actionCreators from './store/actions/index'
