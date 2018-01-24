@@ -5,6 +5,7 @@ import StoreIndex from './scenes/StoreIndex/StoreIndex'
 import Store from './scenes/Store/Store'
 import Navbar from './components/Navbar/Navbar'
 import About from './scenes/About/About'
+import NotFoundPage from './scenes/NotFoundPage/NotFoundPage'
 
 import * as actionCreators from './store/actions/index'
 
@@ -12,6 +13,7 @@ import Map from './scenes/Map/Map'
 
 import {
     BrowserRouter as Router,
+    Switch,
     Route
 } from 'react-router-dom'
 
@@ -26,11 +28,14 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
-          <Route exact path='/' component={HomePage} />
-          <Route path='/about' component={About} />
-          <Route path='/stores' exact component={StoreIndex} />
-          <Route path='/stores/:name' component={Store} />
-          <Route path='/map' component={Map} />
+          <Switch>
+            <Route exact path='/' component={HomePage} />
+            <Route path='/about' component={About} />
+            <Route path='/stores' exact component={StoreIndex} />
+            <Route path='/stores/:name' component={Store} />
+            <Route path='/map' component={Map} />
+            <Route component={NotFoundPage} />
+          </Switch>
         </div>
       </Router>
     )
