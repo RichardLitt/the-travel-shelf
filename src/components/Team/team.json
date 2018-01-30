@@ -1,0 +1,55 @@
+[
+  {
+    "avatar": "img/richard.jpg",
+    "name": "Richard Littauer",
+    "jobTitle": "Founder",
+    "jobSubTitle": "Web Developer",
+    "bio": "Full stack developer, nomad, poet, sailor, linguist, writer, and runner. Always making new projects, always iterating on the old ones.",
+    "social": {
+      "github": "https://github.com/RichardLitt",
+      "twitter": "https://twitter.com/richlitt",
+      "linkedin": "https://www.linkedin.com/in/richard-littauer-130026138/",
+      "facebook": null,
+      "website": null
+    }
+  }, {
+    "avatar": "img/vernon.jpg",
+    "name": "Vernon Lillies",
+    "jobTitle": "Full Stack",
+    "jobSubTitle": "Web Developer",
+    "bio": "Full stack developer with a love for flying robots, Cleantech, and weekly food specials. Always learning new skills and giving 100% to get the job done.",
+    "social": {
+      "github": "https://github.com/VernL",
+      "twitter": "https://twitter.com/Vernon_Lillies",
+      "linkedin": "https://www.linkedin.com/in/vernon-lillies-a3172270/",
+      "facebook": null,
+      "website": null
+    }
+  }, {
+    "avatar": "img/ioanna.jpg",
+    "name": "Joanna Katsifaraki",
+    "jobTitle": "Front End Developer",
+    "jobSubTitle": "Designer",
+    "bio": "Love designing, coding and developing responsive websites, drinking lattes, green tea, listening to lounge, jazz, running and playing tennis.",
+    "social": {
+      "github": "https://github.com/Jojokats",
+      "twitter": "https://twitter.com/Joanna_Kts",
+      "linkedin": "https://www.linkedin.com/in/joannakats/",
+      "facebook": null,
+      "website": null
+    }
+  }, {
+    "avatar": "img/hanie.png",
+    "name": "Hanie Jafari",
+    "jobTitle": "Full Stack",
+    "jobSubTitle": "Web Developer",
+    "bio": "Full-stack developer, UX/UI follower, Marketing, Strategy, startups. Loves innovative solutions. Always excited to learn more. Enjoys Yoga, swimming, cooking and hanging out with friends.",
+    "social": {
+      "github": "https://github.com/ZJaf",
+      "twitter": null,
+      "linkedin": "https://www.linkedin.com/in/honeyjafari/",
+      "facebook": null,
+      "website": null
+    }
+  }
+]
