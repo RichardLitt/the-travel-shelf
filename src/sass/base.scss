@@ -1,8 +1,10 @@
 // Base styles
-@import "./variables.scss";
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/css/font-awesome.css";
+
 
 body {
-  margin-top: 105px;
   font-family: $font-family-serif;
 }
 

@@ -4,30 +4,15 @@
 
 ## Install and usage
 
-Built with a React front-end using Sass and a Node/Express backend
-Persistent data stored in a MongoDB database hosted on mlab.com
-
-The Database URI connection scheme is loaded as an environment variable named `MONGODB_URI`. In a local environment, the `MONGODB_URI` variable can be loaded from a `.env` file located in the root directory. To start, `touch .env` and then get a connection scheme URI from either your own database, or mLab, or by contacting @VernL.
-
-Node version: v8.9.1.
+On first run, install gatsby cli globally `npm install --global gatsby-cli`.
 
 Run `npm install` to install dependencies.
 
-Run `npm run dev` to run app in development mode.
-
-Finally, open http://localhost:3000 to view the app in the browser.
-
-### Sass
-
-To run Sass, use `npm run watch-css`.
-
-### Testing
-
-`npm run test`
+Run `gatsby develop`.
 
 ## Live Site
 
-This is hosted on Heroku, at https://the-travel-shelf.herokuapp.com/. Contact Richard if you need access or want to change something. The URL is forwarded to thetravelshelf.com, and automatically builds on `master`. 
+The site is hosted on Netlify. Contact Richard if you need access or want to change something.
 
 ## Contribute
 

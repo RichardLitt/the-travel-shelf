@@ -1,0 +1,7 @@
+.storeCard {
+  box-shadow: 17px 21px 8px -5px #777f80;
+  box-sizing: border-box;
+  transition: all .2s ease-in-out; }
+
+.storeCard:hover {
+  transform: scale(1.1); }

@@ -1,6 +1,6 @@
 [
   {
-    "avatar": "img/richard.jpg",
+    "avatar": "richard.jpg",
     "name": "Richard Littauer",
     "jobTitle": "Founder",
     "jobSubTitle": "Web Developer",
@@ -13,7 +13,7 @@
       "website": null
     }
   }, {
-    "avatar": "img/vernon.jpg",
+    "avatar": "vernon.jpg",
     "name": "Vernon Lillies",
     "jobTitle": "Full Stack",
     "jobSubTitle": "Web Developer",
@@ -26,7 +26,7 @@
       "website": null
     }
   }, {
-    "avatar": "img/ioanna.jpg",
+    "avatar": "ioanna.jpg",
     "name": "Joanna Katsifaraki",
     "jobTitle": "Front End Developer",
     "jobSubTitle": "Designer",
@@ -39,7 +39,7 @@
       "website": null
     }
   }, {
-    "avatar": "img/hanie.png",
+    "avatar": "hanie.png",
     "name": "Hanie Jafari",
     "jobTitle": "Full Stack",
     "jobSubTitle": "Web Developer",

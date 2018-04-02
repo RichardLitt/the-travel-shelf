@@ -1,3 +1,0 @@
-export const SET_STORES = 'SET_STORES'
-export const SET_SELECTED_STORE = 'SET_SELECTED_STORE'
-
